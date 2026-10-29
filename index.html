@@ -1,0 +1,2220 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Berühmte Probleme — visuell erklärt</title>
+<meta name="description" content="Sieben berühmte Mathematikprobleme interaktiv erklärt: Collatz, Goldbach, Primzahlzwillinge, Primzahlsatz, Ziegenproblem, Geburtstagsparadoxon, Buffons Nadeln.">
+<meta name="theme-color" content="#0a0a0f">
+<meta name="color-scheme" content="dark">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0a0f'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='13' font-weight='700' fill='%23ffc24a' text-anchor='middle'%3E%E2%88%91%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<a class="skip" href="#main">Zum Inhalt springen</a>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="brand" href="#menu"><span class="brand-mark" aria-hidden="true">∑</span>Probleme</a>
+    <nav aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="#menu">Alle Probleme</a></li>
+        <li><a href="#collatz">Collatz</a></li>
+        <li><a href="#goldbach">Goldbach</a></li>
+        <li><a href="#zwillinge">Zwillinge</a></li>
+        <li><a href="#primzahlsatz">Primzahlsatz</a></li>
+        <li><a href="#ziegenproblem">Ziegenproblem</a></li>
+        <li><a href="#geburtstag">Geburtstag</a></li>
+        <li><a href="#buffon">Buffon</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================================================================ Menü -->
+  <section class="menu" id="menu">
+    <div class="wrap">
+      <p class="eyebrow">Sieben Probleme · sieben Werkstätten</p>
+      <h1>Mathematik, die man anfassen kann.</h1>
+      <p class="lede">
+        Jedes dieser Probleme beginnt mit einer Regel, die in einen Satz passt — und endet
+        bei einer Frage, die niemand beantworten kann. Wähle eines aus: Du bekommst die
+        Definition, ein Labor zum Selbstrechnen, die entscheidenden Bilder und den Stand
+        der Forschung.
+      </p>
+
+      <ul class="menu-grid">
+        <li class="is-feature">
+          <a class="menu-card is-feature" href="#collatz">
+            <span class="mc-go" aria-hidden="true">→</span>
+            <span class="badge badge-open">ungelöst</span>
+            <h2>Das Collatz-Problem</h2>
+            <p>Ist n gerade, halbiere es. Ist es ungerade, verdreifache es und addiere eins.
+              Landet jede Zahl bei 1? Seit 1937 offen — und keines der 2⁷¹ geprüften
+              Beispiele widerlegt es.</p>
+            <span class="mc-meta"><span>111 Schritte für 27</span><span>geprüft bis 2⁷¹</span><span>1 Zyklus</span></span>
+          </a>
+        </li>
+        <li>
+          <a class="menu-card" href="#goldbach">
+            <span class="mc-go" aria-hidden="true">→</span>
+            <span class="badge badge-open">ungelöst</span>
+            <h2>Goldbach-Vermutung</h2>
+            <p>Jede gerade Zahl ab 4 ist die Summe zweier Primzahlen. Geprüft bis 4 · 10¹⁸,
+              bewiesen: nie.</p>
+            <span class="mc-meta"><span>seit 1742</span><span>0 Gegenbeispiele</span></span>
+          </a>
+        </li>
+        <li>
+          <a class="menu-card" href="#zwillinge">
+            <span class="mc-go" aria-hidden="true">→</span>
+            <span class="badge badge-open">ungelöst</span>
+            <h2>Primzahlzwillinge</h2>
+            <p>11 und 13, 41 und 43: Primzahlen mit Abstand 2. Gibt es unendlich viele
+              Paare? Seit 2013 weiß man immerhin: der Abstand ist beschränkt.</p>
+            <span class="mc-meta"><span>8 169 Paare unter 10⁶</span><span>Brun 1919</span></span>
+          </a>
+        </li>
+        <li>
+          <a class="menu-card" href="#primzahlsatz">
+            <span class="mc-go" aria-hidden="true">→</span>
+            <span class="badge badge-solved">gelöst 1896</span>
+            <h2>Der Primzahlsatz</h2>
+            <p>Wie viele Primzahlen gibt es unterhalb von x? Ungefähr x / ln x — und das
+              exakt genug, um daraus eine ganze Theorie zu bauen.</p>
+            <span class="mc-meta"><span>π(10⁶) = 78 498</span><span>Verhältnis 1,084</span></span>
+          </a>
+        </li>
+        <li>
+          <a class="menu-card" href="#ziegenproblem">
+            <span class="mc-go" aria-hidden="true">→</span>
+            <span class="badge badge-paradox">Paradox</span>
+            <h2>Das Ziegenproblem</h2>
+            <p>Drei Türen, ein Auto, zwei Ziegen. Der Moderator öffnet eine Ziege —
+              Wechseln gewinnt doppelt so oft.</p>
+            <span class="mc-meta"><span>⅓ gegen ⅔</span><span>1990</span></span>
+          </a>
+        </li>
+        <li>
+          <a class="menu-card" href="#geburtstag">
+            <span class="mc-go" aria-hidden="true">→</span>
+            <span class="badge badge-paradox">Paradox</span>
+            <h2>Geburtstagsparadoxon</h2>
+            <p>Ab 23 Personen ist ein gemeinsamer Geburtstag wahrscheinlicher als keiner.
+              Es sind die Paare, nicht die Personen.</p>
+            <span class="mc-meta"><span>50,7 % bei 23</span><span>253 Paare</span></span>
+          </a>
+        </li>
+        <li>
+          <a class="menu-card" href="#buffon">
+            <span class="mc-go" aria-hidden="true">→</span>
+            <span class="badge badge-solved">gelöst 1777</span>
+            <h2>Buffons Nadelproblem</h2>
+            <p>Nadeln auf liniertes Papier werfen und aus der Trefferquote π schätzen.
+              Zufall als Messgerät.</p>
+            <span class="mc-meta"><span>P = 2L / (πd)</span><span>Fehler ~ 1/√N</span></span>
+          </a>
+        </li>
+      </ul>
+
+      <p class="menu-note">
+        Alle Zahlen auf dieser Seite werden im Browser berechnet — keine Tabellen aus dem
+        Netz, kein Tracking, keine externen Schriften. Wo eine Aussage bewiesen ist, steht
+        das dabei; wo nur gerechnet wurde, auch.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ============================================================ collatz -->
+  <article class="chapter" id="collatz" hidden>
+  <!-- ================================================================== Hero -->
+  <section class="hero">
+    <div class="wrap">
+      <a class="back" href="#menu">← Alle Probleme</a>
+      <p class="eyebrow">Zahlentheorie · offenes Problem seit 1937</p>
+      <h1>Jede Zahl fällt <em>irgendwann</em> auf 1.</h1>
+      <p class="lede">
+        Nimm irgendeine natürliche Zahl. Ist sie gerade, halbiere sie. Ist sie ungerade,
+        verdreifache sie und addiere eins. Wiederhole das mit dem Ergebnis.
+        <strong>Behauptung:</strong> Du landest immer bei 1 — egal, wo du startest.
+        Niemand hat das je bewiesen.
+      </p>
+
+      <div class="hero-grid">
+        <div class="rule-card is-even">
+          <p class="rule-label"><span class="rule-dot" aria-hidden="true"></span>Fall 1 · gerade</p>
+          <p class="formula">n <span aria-hidden="true">↦</span> n <strong>/ 2</strong></p>
+          <p>Ist n gerade, wird halbiert. Das ist der absteigende Teil der Reise.</p>
+        </div>
+        <div class="rule-card is-odd">
+          <p class="rule-label"><span class="rule-dot" aria-hidden="true"></span>Fall 2 · ungerade</p>
+          <p class="formula">n <span aria-hidden="true">↦</span> <strong>3n + 1</strong></p>
+          <p>Ist n ungerade, geht es steil nach oben. Danach folgt sofort eine Halbierung.</p>
+        </div>
+
+        <div class="hero-example">
+          <div class="hero-example-head">
+            <p class="card-title">Beispiel: der Startwert 27</p>
+            <span class="note">27 → 1 · <b class="num">111</b> Schritte · Höhepunkt <b class="num">9&thinsp;232</b></span>
+          </div>
+          <canvas id="heroCanvas" height="126" aria-label="Verlauf der Collatz-Folge für den Startwert 27, logarithmisch aufgetragen: 111 Schritte bis zur 1, mit einem Zwischenhoch von 9232."></canvas>
+        </div>
+      </div>
+
+      <div class="hero-meta">
+        <span><b>0</b> Gegenbeispiele</span>
+        <span>geprüft bis <b class="num">2⁷¹ ≈ 2,36 · 10²¹</b></span>
+        <span><b class="num">524</b> Schritte für den Rekordhalter 837&thinsp;799</span>
+        <span>Paul Erdős: <b>500&nbsp;$</b> für einen Beweis</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ Definition -->
+  <section class="section" id="definition">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num" aria-hidden="true">01</span>
+        <div>
+          <h2>Die Regel in zwei Zeilen</h2>
+          <p class="sec-sub">Mehr braucht es nicht. Genau deshalb ist es so verblüffend, dass die Frage offen ist.</p>
+        </div>
+      </div>
+
+      <div class="cols-2">
+        <div class="prose reveal">
+          <p>
+            Für eine Startzahl <span class="mono nowrap">n = a<sub>0</sub></span> bildest du die Folge
+            <span class="mono nowrap">a<sub>0</sub>, a<sub>1</sub>, a<sub>2</sub>, …</span> mit:
+          </p>
+
+          <div class="formula-block">
+            <div class="fb-row">
+              <span class="fb-lhs">a<sub>k+1</sub> = a<sub>k</sub> / 2</span>
+              <span class="fb-cond">falls a<sub>k</sub> gerade</span>
+            </div>
+            <div class="fb-row">
+              <span class="fb-lhs">a<sub>k+1</sub> = 3 · a<sub>k</sub> + 1</span>
+              <span class="fb-cond">falls a<sub>k</sub> ungerade</span>
+            </div>
+          </div>
+
+          <p>
+            Du hörst auf, sobald eine 1 auftaucht. Die Anzahl der Schritte bis dahin heißt
+            <strong>Stoppzeit</strong>. Für die 27 sind es 111 Schritte — mit einem Umweg über
+            9&thinsp;232, das ist mehr als das 340-Fache des Startwerts.
+          </p>
+          <p>
+            Bei 1 angekommen, geht es übrigens weiter: 1 ist ungerade, also
+            <span class="mono">3 · 1 + 1 = 4</span>, dann 2, dann wieder 1. Es entsteht der
+            <strong>triviale Zyklus</strong> 4 → 2 → 1. Ihn kann man nicht verlassen. Deshalb
+            endet die Definition dort.
+          </p>
+          <div class="callout" style="margin-top:24px">
+            <span class="ico" aria-hidden="true">2×</span>
+            <p>
+              Die Behauptung „jede Folge endet bei 1“ enthält zwei Aussagen:
+              <b>Jede</b> Bahn erreicht irgendwann die 1, und es gibt <b>keinen</b> weiteren Zyklus
+              außer 4 → 2 → 1.
+            </p>
+          </div>
+        </div>
+
+        <figure class="panel cycle-card reveal">
+          <svg viewBox="0 0 244 205" width="300" height="252" role="img" aria-labelledby="cycleTitle cycleDesc">
+            <title id="cycleTitle">Der triviale Zyklus</title>
+            <desc id="cycleDesc">Kreislauf: 4 halbiert ergibt 2, 2 halbiert ergibt 1, und 3 mal 1 plus 1 ergibt wieder 4.</desc>
+            <defs>
+              <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="rgba(255,255,255,0.4)"></path>
+              </marker>
+            </defs>
+            <path d="M 95 50 L 147 50" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="1.5" marker-end="url(#arrow)"></path>
+            <path d="M 172 73 C 172 116 161 140 141 151" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="1.5" marker-end="url(#arrow)"></path>
+            <path d="M 103 151 C 83 140 72 118 72 75" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="1.5" marker-end="url(#arrow)"></path>
+            <text class="edge-label" x="121" y="41" text-anchor="middle">÷ 2</text>
+            <text class="edge-label" x="181" y="113" text-anchor="start">÷ 2</text>
+            <text class="edge-label" x="47" y="113" text-anchor="end">3n + 1</text>
+            <circle cx="72" cy="50" r="23" fill="#14141d" stroke="rgba(90,212,242,0.5)" stroke-width="1.5"></circle>
+            <circle cx="172" cy="50" r="23" fill="#14141d" stroke="rgba(90,212,242,0.5)" stroke-width="1.5"></circle>
+            <circle cx="122" cy="160" r="23" fill="#14141d" stroke="rgba(99,230,164,0.6)" stroke-width="1.5"></circle>
+            <text class="node-label" x="72" y="55" text-anchor="middle">4</text>
+            <text class="node-label" x="172" y="55" text-anchor="middle">2</text>
+            <text class="node-label" x="122" y="165" text-anchor="middle">1</text>
+          </svg>
+          <p class="cap">Der einzige bekannte Zyklus — er lässt sich nicht verlassen.</p>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================================== Rechner -->
+  <section class="section" id="rechner">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num" aria-hidden="true">02</span>
+        <div>
+          <h2>Rechne selbst</h2>
+          <p class="sec-sub">Jede Zahl bis 10⁹ läuft live durch die Regel. Tippe einen Startwert oder wähle einen Klassiker.</p>
+        </div>
+      </div>
+
+      <div class="panel reveal">
+        <div class="controls">
+          <div class="field">
+            <label for="nInput">Startwert n</label>
+            <input id="nInput" type="number" name="startwert" inputmode="numeric" min="1" max="1000000000" step="1" value="27" autocomplete="off" spellcheck="false" placeholder="z. B. 27">
+          </div>
+          <button class="btn btn-icon" id="minusBtn" type="button" aria-label="Startwert um eins verringern">−</button>
+          <button class="btn btn-icon" id="plusBtn" type="button" aria-label="Startwert um eins erhöhen">+</button>
+          <button class="btn btn-primary" id="playBtn" type="button" aria-pressed="false">
+            <span aria-hidden="true">▶</span> Abspielen
+          </button>
+          <button class="btn" id="randBtn" type="button">Zufall</button>
+        </div>
+
+        <p class="hint" id="nHint">Die Folge für <span data-bind="n">27</span> Schritt für Schritt — ungerade Werte sind bernsteinfarben, gerade blau.</p>
+        <p class="error" id="nError" role="alert" aria-live="polite"></p>
+
+        <ul class="seq" id="seqList" aria-label="Collatz-Folge"></ul>
+
+        <dl class="stats">
+          <div class="stat is-accent">
+            <dt>Schritte bis 1</dt>
+            <dd id="statSteps">—</dd>
+          </div>
+          <div class="stat is-warm">
+            <dt>Höchster Wert</dt>
+            <dd id="statMax">—</dd>
+          </div>
+          <div class="stat">
+            <dt>Maximum / Start</dt>
+            <dd id="statGrowth">—</dd>
+          </div>
+          <div class="stat">
+            <dt>Aktueller Wert</dt>
+            <dd id="statNow">—</dd>
+          </div>
+        </dl>
+
+        <div class="presets">
+          <span class="presets-label">Rekordhalter</span>
+          <button class="chip-btn" type="button" data-preset="27" aria-pressed="true">27</button>
+          <button class="chip-btn" type="button" data-preset="97" aria-pressed="false">97</button>
+          <button class="chip-btn" type="button" data-preset="871" aria-pressed="false">871</button>
+          <button class="chip-btn" type="button" data-preset="6171" aria-pressed="false">6&thinsp;171</button>
+          <button class="chip-btn" type="button" data-preset="77031" aria-pressed="false">77&thinsp;031</button>
+          <button class="chip-btn" type="button" data-preset="837799" aria-pressed="false">837&thinsp;799</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================== Trajektorie -->
+  <section class="section" id="trajektorie">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num" aria-hidden="true">03</span>
+        <div>
+          <h2>Die Bahn des Startwerts <span class="num" data-bind="n" style="color:var(--cyan)">27</span></h2>
+          <p class="sec-sub">Aufgetragen ist jeder Wert der Folge über seiner Schrittzahl. Links unten geht es los, rechts endet die Reise bei 1.</p>
+        </div>
+      </div>
+
+      <figure class="figure reveal">
+        <div class="fig-head">
+          <div class="fig-title">
+            <b>Trajektorie</b>
+            <span>n = <span class="num" data-bind="n">27</span></span>
+            <span>· <span id="trajStepsNote" class="num">111</span> Schritte</span>
+          </div>
+          <div class="fig-tools">
+            <button class="mini-btn" id="logBtn" type="button" aria-pressed="false">Log-Skala</button>
+          </div>
+        </div>
+        <div class="canvas-wrap">
+          <canvas id="traj" class="chart" role="img" aria-label="Liniendiagramm der Collatz-Folge: Wert über Schrittzahl, logarithmisch oder linear."></canvas>
+        </div>
+        <div class="slider-row">
+          <label for="stepRange">Schritt</label>
+          <input id="stepRange" type="range" min="0" max="110" value="110" step="1">
+          <span class="slider-val" id="stepOut">110 / 110</span>
+        </div>
+        <figcaption class="fig-foot">
+          <span class="legend-item"><span class="legend-swatch" style="background:var(--amber)"></span>ungerade Werte</span>
+          <span class="legend-item"><span class="legend-swatch" style="background:var(--cyan)"></span>gerade Werte</span>
+          <span class="legend-item"><span class="legend-swatch" style="background:var(--green)"></span>Ankunft bei 1</span>
+          <span>Ziehe den Regler, um die Folge zu sezieren.</span>
+          <span class="axis-note">x: Schrittzahl · y: Wert</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============================================================ Stoppzeiten -->
+  <section class="section" id="stoppzeiten">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num" aria-hidden="true">04</span>
+        <div>
+          <h2>Ein Punkt pro Zahl, 10&thinsp;000 Punkte pro Bild</h2>
+          <p class="sec-sub">Jeder Punkt ist ein Startwert n, aufgetragen gegen seine Stoppzeit. Kein Muster, das man fassen könnte — nur Struktur, die man beschreiben kann.</p>
+        </div>
+      </div>
+
+      <figure class="figure reveal">
+        <div class="fig-head">
+          <div class="fig-title"><b>Stoppzeiten</b><span id="scatterNote">alle n bis 10&thinsp;000</span></div>
+          <div class="fig-tools">
+            <button class="mini-btn" id="kbdBtn" type="button">Mit Pfeiltasten erkunden</button>
+          </div>
+        </div>
+        <div class="canvas-wrap">
+          <canvas id="scatter" class="chart" tabindex="0" role="img" aria-label="Streudiagramm der Stoppzeiten für alle Startwerte bis 10 000. Pfeiltasten bewegen die Auswahl."></canvas>
+          <div class="tip" id="tip" aria-live="polite" aria-atomic="true"></div>
+        </div>
+        <div class="slider-row">
+          <label for="nRange">Bis n =</label>
+          <input id="nRange" type="range" min="1000" max="100000" step="1000" value="10000">
+          <span class="slider-val" id="nRangeOut">10&thinsp;000</span>
+        </div>
+        <figcaption class="fig-foot">
+          <span class="legend-item"><span class="legend-swatch" style="background:var(--cyan)"></span>kurze Stoppzeit</span>
+          <span class="legend-item"><span class="legend-swatch" style="background:var(--amber)"></span>lange Stoppzeit</span>
+          <span class="legend-item"><span class="legend-swatch" style="background:#fff;border-radius:50%"></span>neue Rekorde</span>
+          <span>Die obere Kante sind die Rekordhalter — jede Zahl dort schlägt alle kleineren.</span>
+          <span class="axis-note">x: Startwert n · y: Schritte bis 1</span>
+        </figcaption>
+      </figure>
+
+      <div class="cols-2" style="margin-top:32px">
+        <div class="prose reveal">
+          <p>
+            Auf den ersten Blick sieht das Bild nach Rauschen aus. Bei genauerem Hinsehen
+            gibt es diagonale Linien: Sie entstehen, weil viele Zahlen ein Vielfaches einer
+            anderen sind und deren Bahn nach ein paar Halbierungen erben.
+          </p>
+          <p>
+            Die Stoppzeiten wachsen im Schnitt logarithmisch — aber unregelmäßig. Die 27 ist
+            der berühmteste Ausreißer: Sie braucht 111 Schritte, während die meisten Zahlen
+            unter 50 mit unter 20 Schritten auskommen.
+          </p>
+        </div>
+        <div class="prose reveal">
+          <p>
+            Für jede einzelne Zahl lässt sich die Frage in Sekunden beantworten. Der Rechner
+            hier tut genau das für 100&thinsp;000 Startwerte. Was fehlt, ist der Sprung von
+            „für alle, die ich geprüft habe“ zu <strong>„für alle“</strong>.
+          </p>
+          <p class="hint">
+            Tipp: Fahre mit der Maus über das Diagramm oder nutze die Pfeiltasten, wenn das
+            Diagramm den Fokus hat.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================= Fluss -->
+  <section class="section" id="fluss">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num" aria-hidden="true">05</span>
+        <div>
+          <h2>Der Fluss in die 1</h2>
+          <p class="sec-sub">Hunderte Bahnen übereinandergelegt, logarithmisch gestaucht. Alles fließt nach rechts unten — und die Dichte zeigt, wo sich die Wege kreuzen.</p>
+        </div>
+      </div>
+
+      <figure class="figure reveal">
+        <div class="fig-head">
+          <div class="fig-title">
+            <b>Alle Bahnen</b>
+            <span>hervorgehoben: <span class="num" id="flowNow" style="color:var(--amber)">27</span></span>
+          </div>
+          <div class="fig-tools">
+            <label for="flowSel" style="font-size:12.5px;color:var(--muted)">Startwert</label>
+            <input id="flowSel" type="number" min="1" max="2000" step="1" value="27" name="hervorheben" inputmode="numeric" autocomplete="off" style="width:96px;font-size:14px;padding:6px 10px;min-height:32px">
+          </div>
+        </div>
+        <div class="canvas-wrap">
+          <canvas id="flow" class="chart" role="img" aria-label="Viele Collatz-Bahnen als Linienschar, logarithmische Werteachse. Die Bahn des gewählten Startwerts ist gelb hervorgehoben."></canvas>
+        </div>
+        <div class="slider-row">
+          <label for="flowRange">Bis n =</label>
+          <input id="flowRange" type="range" min="100" max="2000" step="100" value="600">
+          <span class="slider-val" id="flowRangeOut">600</span>
+        </div>
+        <figcaption class="fig-foot">
+          <span class="legend-item"><span class="legend-swatch" style="background:rgba(150,160,255,0.7)"></span>alle Bahnen</span>
+          <span class="legend-item"><span class="legend-swatch" style="background:var(--amber)"></span>gewählter Startwert</span>
+          <span>Wo sich viele Linien bündeln, laufen die Folgen durch dieselben Zwischenwerte.</span>
+          <span class="axis-note">x: Schrittzahl · y: Wert (log)</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================================================================ Warum -->
+  <section class="section" id="warum">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num" aria-hidden="true">06</span>
+        <div>
+          <h2>Warum das seit 90 Jahren offen ist</h2>
+          <p class="sec-sub">Heuristisch ist die Sache klar. Ein Beweis ist es nicht — und die Lücke dazwischen ist das eigentliche Problem.</p>
+        </div>
+      </div>
+
+      <div class="cols-2">
+        <div class="prose reveal">
+          <p>
+            <strong>Die Intuition.</strong> Etwa jede zweite Zahl ist ungerade, und ein
+            ungerader Schritt wird sofort von einer Halbierung gefolgt. Im Schnitt wird eine
+            Zahl also pro Schritt mit dem Faktor
+            <span class="mono nowrap" style="color:var(--cyan)">√(½ · 3⁄2) ≈ 0,866</span> multipliziert.
+            Das ist kleiner als 1 — die Folge müsste im Mittel also fallen. Genau das zeigen
+            die Bilder oben.
+          </p>
+          <p>
+            <strong>Die Lücke.</strong> „Im Mittel fallen“ ist keine Aussage über jede einzelne
+            Zahl. Die Folgen verhalten sich wie ein Zufallsspaziergang mit negativer Drift:
+            fast immer endet er tief, aber ein Beweis dafür, dass <em>kein</em> Ausreißer
+            für immer nach oben entkommt, fehlt. Und weil die Regel eine Multiplikation mit 3
+            enthält, gibt es keine der üblichen Techniken aus der Zahlentheorie, die man
+            anwenden könnte.
+          </p>
+          <p>
+            <strong>Die Härte.</strong> 1972 zeigte John Conway, dass Verallgemeinerungen des
+            Problems algorithmisch unentscheidbar sind. Ein allgemeiner Beweis müsste also
+            mehr leisten als jede mechanische Rechnung — und das erklärt, warum
+            Computerprüfungen bis 2⁷¹ die Frage nicht berühren.
+          </p>
+
+          <blockquote class="quote">
+            „Mathematik ist für solche Probleme noch nicht reif.“
+            <footer>Paul Erdős, dem ein Preisgeld von 500&nbsp;$ für eine Lösung zugeschrieben wird</footer>
+          </blockquote>
+        </div>
+
+        <div class="reveal">
+          <h3 style="margin-bottom:16px;color:var(--muted);font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:500">Forschungsstand</h3>
+          <ol class="timeline">
+            <li>
+              <span class="year">1937</span>
+              <p><b>Lothar Collatz</b> formuliert die Vermutung — inspiriert von Graphen-Problemen, nicht von Zahlen.</p>
+            </li>
+            <li>
+              <span class="year">1960er</span>
+              <p>Unter dem Namen <b>„Hailstone numbers“</b> (Hagelkörner) wird das Problem populär: Zahlen steigen und fallen wie Hagel.</p>
+            </li>
+            <li>
+              <span class="year">1972</span>
+              <p><b>John Conway</b> beweist: Verallgemeinerte Collatz-Abbildungen sind unentscheidbar.</p>
+            </li>
+            <li>
+              <span class="year">2003</span>
+              <p><b>Krasikov &amp; Lagarias</b> liefern die ersten nicht-trivialen Schranken dafür, wie tief Bahnen unter ihren Startwert fallen.</p>
+            </li>
+            <li>
+              <span class="year">2019</span>
+              <p><b>Terence Tao</b> zeigt: Fast alle Bahnen erreichen „fast“ beschränkte Werte — ein großer Schritt, aber kein Beweis.</p>
+            </li>
+            <li>
+              <span class="year">2020</span>
+              <p><b>David Barina</b> verifiziert die Vermutung per Computer für alle n &lt; 2⁶⁸ ≈ 2,95 · 10²⁰.</p>
+            </li>
+            <li>
+              <span class="year">2025</span>
+              <p><b>Barina</b> verschiebt die geprüfte Grenze auf 2⁷¹ ≈ 2,36 · 10²¹ — auf europäischen Supercomputern, mit einer Beschleunigung um Faktor 1&thinsp;335.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================================== Rekorde -->
+  <section class="section" id="rekorde">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num" aria-hidden="true">07</span>
+        <div>
+          <h2>Die Rekordhalter</h2>
+          <p class="sec-sub">Zahlen, die länger brauchen als jede kleinere Zahl — eine Auswahl. Bis 1&thinsp;000&thinsp;000 gibt es genau 43 davon.</p>
+        </div>
+      </div>
+
+      <div class="table-wrap reveal">
+        <table>
+          <caption class="sr-only">Rekordhalter der Stoppzeit bis eine Million</caption>
+          <thead>
+            <tr>
+              <th scope="col">Startwert <span class="mono">n</span></th>
+              <th scope="col">Schritte bis 1</th>
+              <th scope="col">Höchster Wert</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-num="27"></td><td class="steps" data-num="111"></td><td class="peak" data-num="9232"></td></tr>
+            <tr><td data-num="97"></td><td class="steps" data-num="118"></td><td class="peak" data-num="9232"></td></tr>
+            <tr><td data-num="871"></td><td class="steps" data-num="178"></td><td class="peak" data-num="190996"></td></tr>
+            <tr><td data-num="6171"></td><td class="steps" data-num="261"></td><td class="peak" data-num="975400"></td></tr>
+            <tr><td data-num="77031"></td><td class="steps" data-num="350"></td><td class="peak" data-num="21933016"></td></tr>
+            <tr><td data-num="837799"></td><td class="steps" data-num="524"></td><td class="peak" data-num="2974984576"></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="tbl-note">
+        Die 524 Schritte der 837&thinsp;799 sind eine zähe Bestmarke: Bis 10&thinsp;000&thinsp;000
+        kommt keine einzige Zahl darüber hinaus.
+      </p>
+    </div>
+  </section>
+
+
+
+    <footer class="chapter-foot">
+      <div class="wrap">
+        <div class="foot-sources">
+          <div>
+            <h4>Quellen</h4>
+            <ul>
+            <li><a href="https://de.wikipedia.org/wiki/Collatz-Problem" target="_blank" rel="noopener noreferrer">Wikipedia: Collatz-Problem</a></li>
+            <li><a href="https://oeis.org/A006877" target="_blank" rel="noopener noreferrer">OEIS A006877 — Rekorde der Stoppzeit</a></li>
+            <li><a href="https://arxiv.org/abs/1909.03562" target="_blank" rel="noopener noreferrer">Tao (2019): Almost all orbits attain almost bounded values</a></li>
+            <li><a href="https://doi.org/10.1007/s11227-025-07337-0" target="_blank" rel="noopener noreferrer">Barina (2025): Verbesserte Grenze 2⁷¹</a></li>
+            <li><a href="https://doi.org/10.1007/s11227-020-03368-x" target="_blank" rel="noopener noreferrer">Barina (2021): Convergence verification bis 2⁶⁸</a></li>
+            </ul>
+          </div>
+        </div>
+        <nav class="chapter-nav" aria-label="Kapitelnavigation">
+          <a class="prev" href="#menu"><span class="cn-k">← Vorher</span><span class="cn-t">Alle Probleme</span></a>
+          <a class="next" href="#goldbach"><span class="cn-k">Weiter →</span><span class="cn-t">Goldbach-Vermutung</span></a>
+        </nav>
+      </div>
+    </footer>
+  </article>
+
+  <!-- ============================================================ goldbach -->
+  <article class="chapter" id="goldbach" hidden>
+    <header class="hero">
+      <div class="wrap">
+        <a class="back" href="#menu">← Alle Probleme</a>
+        <p class="eyebrow">Ungelöst seit 1742 · Zahlentheorie</p>
+        <h1>Jede gerade Zahl ab 4 ist die Summe zweier Primzahlen.</h1>
+        <p class="lede">1742 schrieb Christian Goldbach es an Euler. Seitdem haben Generationen von
+     Mathematikern daran gearbeitet, Computer haben bis 4 · 10¹⁸ nachgerechnet, und
+     bewiesen ist es bis heute nicht. Kein Gegenbeispiel, kein Beweis — nur eine
+     Vermutung, die immer überzeugender wird.</p>
+        <div class="hero-meta"><span><b class="num">4 · 10¹⁸</b> geprüft</span>
+        <span><b>0</b> Gegenbeispiele</span>
+        <span><b class="num">2168</b> Zerlegungen für 99&thinsp;330</span>
+        <span><b>284</b> Jahre offen</span></div>
+      </div>
+    </header>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-num" aria-hidden="true">01</span>
+            <div>
+              <h2>Die Behauptung</h2>
+              <p class="sec-sub">Zwei Primzahlen, eine gerade Zahl, kein Rest. Klingt harmlos und ist 284 Jahre alt.</p>
+            </div>
+          </div>
+
+          <div class="cols-2">
+            <div class="prose reveal">
+              <p>
+                Am 7. Juni 1742 schrieb Christian Goldbach an Leonhard Euler eine Vermutung
+                über ungerade Zahlen als Summe dreier Primzahlen. Euler antwortete, das sei
+                äquivalent zu etwas Einfacherem: Jede gerade Zahl ab 4 müsste sich als Summe
+                zweier Primzahlen schreiben lassen. Genau diese Fassung ist als
+                <strong>Goldbach-Vermutung</strong> berühmt geworden.
+              </p>
+              <p>
+                Die 1 zählt nicht als Primzahl, sonst wäre die Sache trivial. Die 2 ist die
+                einzige gerade Primzahl — deshalb sind Zerlegungen wie 4 = 2 + 2 die
+                Ausnahme. Ab 6 sind beide Summanden ungerade.
+              </p>
+            </div>
+
+            <div class="reveal">
+              <div class="formula-block">
+                <div class="fb-row">
+                  <span class="fb-lhs">n = p + q</span>
+                  <span class="fb-cond">n gerade, p und q prim</span>
+                </div>
+                <div class="fb-row">
+                  <span class="fb-lhs">100 = 3 + 97 = 47 + 53</span>
+                  <span class="fb-cond">6 Zerlegungen insgesamt</span>
+                </div>
+              </div>
+
+              <div class="callout">
+                <span class="ico" aria-hidden="true">≠</span>
+                <p>
+                  Eulers Fassung heißt <b>starke</b> Vermutung. Die <b>schwache</b> — jede
+                  ungerade Zahl ab 7 als Summe dreier Primzahlen — wurde 2013 von Harald
+                  Helfgott bewiesen. Die starke ist offen.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-num" aria-hidden="true">02</span>
+            <div>
+              <h2>Labor: Zerlege eine Zahl</h2>
+              <p class="sec-sub">Gib eine gerade Zahl ein — die Seite sucht alle Primzahlpaare, die sie bilden.</p>
+            </div>
+          </div>
+
+          <div class="panel reveal">
+            <div class="controls">
+              <div class="field">
+                <label for="gbN">Gerade Zahl n</label>
+                <input id="gbN" type="number" name="goldbach-n" value="100" min="4" max="30000" step="2" inputmode="numeric" autocomplete="off" spellcheck="false">
+              </div>
+              <button class="btn btn-primary" id="gbRand" type="button">Zufallszahl</button>
+            </div>
+            <p class="hint">Ungerade Eingaben werden auf die nächste gerade Zahl aufgerundet.</p>
+            <p class="problem-res" id="gbRes" aria-live="polite">—</p>
+            <p class="pairs" id="gbPairs"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-num" aria-hidden="true">03</span>
+            <div>
+              <h2>Der Goldbach-Komet</h2>
+              <p class="sec-sub">Trägt man für jede gerade Zahl die Anzahl ihrer Zerlegungen auf, entsteht eine Wolke mit Schweif.</p>
+            </div>
+          </div>
+
+          <figure class="figure reveal">
+            <div class="fig-head">
+              <div class="fig-title"><b>Zerlegungen je gerader Zahl</b><span id="gbCometNote">bis 10 000</span></div>
+              <div class="fig-tools">
+                <span class="legend-item"><span class="legend-swatch" style="background:var(--cyan)"></span>gewähltes n</span>
+              </div>
+            </div>
+            <div class="canvas-wrap">
+              <canvas id="gbComet" class="chart" role="img" aria-label="Punktewolke der Zerlegungszahlen für gerade Zahlen bis 10 000."></canvas>
+            </div>
+            <div class="slider-row">
+              <label for="gbRange">bis N</label>
+              <input id="gbRange" type="range" min="2000" max="30000" step="2000" value="10000">
+              <span class="slider-val" id="gbRangeOut">10&thinsp;000</span>
+            </div>
+            <figcaption class="fig-foot">
+              <span class="legend-item"><span class="legend-swatch" style="background:var(--amber)"></span>eine gerade Zahl</span>
+              <span>Oben liegen Zahlen mit besonders vielen Zerlegungen — meist Vielfache von 6.</span>
+              <span class="axis-note">x: gerade Zahl · y: Zerlegungen</span>
+            </figcaption>
+          </figure>
+
+          <div class="prose reveal" style="margin-top:28px">
+            <p>
+              Die untere Kante ist dicht: Fast jede gerade Zahl hat mindestens eine
+              Zerlegung. Nach oben wird es ausgefranst. Für ein n mit vielen Zerlegungen
+              muss n selbst „günstig“ liegen — teilbar durch 6 zum Beispiel, weil dann
+              keine der beiden Primzahlen durch 3 fallen muss.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-num" aria-hidden="true">04</span>
+            <div>
+              <h2>Wie oft geht es auf?</h2>
+              <p class="sec-sub">Die meisten Zahlen haben wenige Zerlegungen; der Schwanz wird mit jedem Schritt nach rechts länger.</p>
+            </div>
+          </div>
+
+          <figure class="figure reveal">
+            <div class="fig-head">
+              <div class="fig-title"><b>Verteilung der Zerlegungszahlen</b><span id="gbHistNote">bis 10 000</span></div>
+            </div>
+            <div class="canvas-wrap">
+              <canvas id="gbHist" class="chart" role="img" aria-label="Histogramm: wie viele gerade Zahlen haben wie viele Primzahlzerlegungen."></canvas>
+            </div>
+            <figcaption class="fig-foot">
+              <span>Balken: Anzahl der geraden Zahlen je Klasse. Gestrichelt: der Mittelwert.</span>
+              <span class="axis-note">x: Zerlegungen · y: wie viele Zahlen</span>
+            </figcaption>
+          </figure>
+
+          <div class="prose reveal" style="margin-top:28px">
+            <p>
+              Der Mittelwert wächst mit N, grob wie n / (ln n)²: Bis 10&thinsp;000 sind es
+              85 Zerlegungen im Schnitt, bis 100&thinsp;000 schon 507. Der Rekord liegt bei
+              2168 — für 99&thinsp;330. Dass eine dieser Zahlen bei exakt 0 landen soll, wäre
+              ein statistischer Ausreißer ohnegleichen. Ein Beweis ist das nicht.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-num" aria-hidden="true">05</span>
+            <div>
+              <h2>Was bisher geschah</h2>
+              <p class="sec-sub">Die Kreismethode erklärt drei Summanden — bei zwei fehlt genau die Freiheit, die sie braucht.</p>
+            </div>
+          </div>
+
+          <div class="cols-2">
+            <div class="prose reveal">
+              <p>
+                <strong>Die Intuition.</strong> Primzahlen sind „dicht genug“: Unterhalb von n
+                gibt es etwa n / ln n von ihnen, und die Zahl der Paare (p, n−p) wächst
+                quadratisch mit dieser Menge. Mit wachsendem n wird es also immer
+                unwahrscheinlicher, dass keine Zerlegung übrig bleibt.
+              </p>
+              <p>
+                <strong>Die Lücke.</strong> Die Kreismethode von Hardy und Littlewood zerlegt
+                das Problem in ein Integral über den Einheitskreis. Bei drei Summanden bleibt
+                eine Variable frei, die man für Abschätzungen nutzen kann — bei zwei
+                Summanden ist genau diese Reserve weg. Das ist der technische Kern, warum
+                die starke Vermutung seit 1742 offen ist.
+              </p>
+              <p>
+                <strong>Was bewiesen ist.</strong> Winogradow zeigte 1937, dass jede
+                hinreichend große ungerade Zahl Summe dreier Primzahlen ist. Chen Jingrun
+                kam 1966 bis auf einen Faktor: Jede hinreichend große gerade Zahl ist
+                p + q, wobei q höchstens zwei Primfaktoren hat.
+              </p>
+
+              <blockquote class="quote">
+                „Es wäre eine Schande, wenn eine so einfache Vermutung so lange ungelöst
+                bliebe.“
+                <footer>sinngemäß nach einem Brief Eulers an Goldbach, 1742</footer>
+              </blockquote>
+            </div>
+
+            <div class="reveal">
+              <h3 style="margin-bottom:16px;color:var(--muted);font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:500">Forschungsstand</h3>
+              <ol class="timeline">
+                <li><span class="year">1742</span><p><b>Goldbach</b> vermutet Summen aus drei Primzahlen, <b>Euler</b> formuliert die Zwei-Summanden-Version.</p></li>
+                <li><span class="year">1923</span><p><b>Hardy &amp; Littlewood</b> entwickeln die Kreismethode und eine heuristische Formel für die Zahl der Zerlegungen.</p></li>
+                <li><span class="year">1937</span><p><b>Winogradow</b> beweist: Jede große ungerade Zahl ist Summe dreier Primzahlen.</p></li>
+                <li><span class="year">1966</span><p><b>Chen Jingrun</b>: Jede große gerade Zahl ist p + q mit höchstens zwei Primfaktoren in q.</p></li>
+                <li><span class="year">2013</span><p><b>Harald Helfgott</b> beweist die schwache (ternäre) Goldbach-Vermutung vollständig.</p></li>
+                <li><span class="year">2014</span><p><b>Oliveira e Silva, Herzog &amp; Pardi</b> verifizieren die starke Vermutung bis 4 · 10¹⁸.</p></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-num" aria-hidden="true">06</span>
+            <div>
+              <h2>Die Rekordhalter</h2>
+              <p class="sec-sub">Gerade Zahlen bis 100&thinsp;000 mit den meisten Primzahlzerlegungen.</p>
+            </div>
+          </div>
+
+          <div class="table-wrap reveal">
+            <table>
+              <caption class="sr-only">Zahlen mit den meisten Primzahlzerlegungen bis 100 000</caption>
+              <thead>
+                <tr><th scope="col">n</th><th scope="col">Zerlegungen</th><th scope="col">Beispiel</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>99&thinsp;330</td><td data-num="2168"></td><td>13 + 99&thinsp;317</td></tr>
+                <tr><td>90&thinsp;090</td><td data-num="2135"></td><td>17 + 90&thinsp;073</td></tr>
+                <tr><td>87&thinsp;780</td><td data-num="2042"></td><td>13 + 87&thinsp;767</td></tr>
+                <tr><td>85&thinsp;470</td><td data-num="1936"></td><td>17 + 85&thinsp;453</td></tr>
+                <tr><td>84&thinsp;630</td><td data-num="1886"></td><td>41 + 84&thinsp;589</td></tr>
+                <tr><td>78&thinsp;540</td><td data-num="1876"></td><td>23 + 78&thinsp;517</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="tbl-note">Alle sechs Zahlen sind durch 30 teilbar — der günstigste Fall für Zerlegungen.</p>
+        </div>
+      </section>
+
+    <footer class="chapter-foot">
+      <div class="wrap">
+        <div class="foot-sources">
+          <div>
+            <h4>Quellen</h4>
+            <ul>
+            <li><a href="https://de.wikipedia.org/wiki/Goldbachsche_Vermutung" target="_blank" rel="noopener noreferrer">Wikipedia: Goldbachsche Vermutung</a></li>
+            <li><a href="https://doi.org/10.1090/S0025-5718-2013-02787-1" target="_blank" rel="noopener noreferrer">Oliveira e Silva, Herzog & Pardi (2014): Empirical verification</a></li>
+            <li><a href="https://arxiv.org/abs/1312.7748" target="_blank" rel="noopener noreferrer">Helfgott (2013): The ternary Goldbach conjecture is true</a></li>
+            <li><a href="https://oeis.org/A002375" target="_blank" rel="noopener noreferrer">OEIS A002375 — Zahl der Zerlegungen</a></li>
+            </ul>
+          </div>
+
+        </div>
+        <nav class="chapter-nav" aria-label="Kapitelnavigation">
+          <a class="prev" href="#collatz"><span class="cn-k">← Vorher</span><span class="cn-t">Collatz-Problem</span></a>
+          <a class="next" href="#zwillinge"><span class="cn-k">Weiter →</span><span class="cn-t">Primzahlzwillinge</span></a>
+        </nav>
+      </div>
+    </footer>
+  </article>
+
+  <!-- ============================================================ zwillinge -->
+  <article class="chapter" id="zwillinge" hidden>
+    <header class="hero">
+      <div class="wrap">
+        <a class="back" href="#menu">← Alle Probleme</a>
+        <p class="eyebrow">Ungelöst · Zahlentheorie</p>
+        <h1>Unendlich viele Primzahlen mit Abstand 2?</h1>
+        <p class="lede">11 und 13, 41 und 43, 199 931 und 199 933: Primzahlzwillinge sind leicht zu finden
+     und schwer zu fassen. Brun zeigte 1919, dass ihre Kehrwerte konvergieren — seither
+     gilt: vermutlich unendlich viele, in jedem Fall aber extrem dünn gesät.</p>
+        <div class="hero-meta"><span><b class="num">8 169</b> Paare unter 10⁶</span>
+        <span><b class="num">1,9022</b> Brun-Konstante</span>
+        <span><b>246</b> bewiesene Schranke</span>
+        <span><b>388 342</b> Stellen im Rekordpaar</span></div>
+      </div>
+    </header>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-num" aria-hidden="true">01</span>
+            <div>
+              <h2>Die Behauptung</h2>
+              <p class="sec-sub">Primzahlen mit Abstand 2 sind leicht zu finden und schwer zu zählen.</p>
+            </div>
+          </div>
+
+          <div class="cols-2">
+            <div class="prose reveal">
+              <p>
+                Ein <strong>Primzahlzwilling</strong> ist ein Paar (p, p+2), bei dem beide
+                Zahlen prim sind: 11 und 13, 41 und 43, 199&thinsp;931 und 199&thinsp;933.
+                Die Vermutung lautet, dass es davon unendlich viele gibt. Beweisen kann das
+                niemand.
+              </p>
+              <p>
+                Der Abstand 2 ist der kleinstmögliche für zwei ungerade Primzahlen. Das Paar
+                (3, 5) ist der einzige Zwilling mit der 3 — jede weitere Primzahl ist
+                ungerade, also muss p ungerade sein. Ab 5 haben alle Zwillinge die Form
+                <span class="mono nowrap">(6k − 1, 6k + 1)</span>: Von drei aufeinander
+                folgenden Zahlen ist genau eine durch 3 teilbar, und die darf nicht prim
+                sein.
+              </p>
+            </div>
+
+            <div class="reveal">
+              <div class="formula-block">
+                <div class="fb-row">
+                  <span class="fb-lhs">(p, p + 2)</span>
+                  <span class="fb-cond">beide prim</span>
+                </div>
+                <div class="fb-row">
+                  <span class="fb-lhs">6k − 1, 6k + 1</span>
+                  <span class="fb-cond">so sehen sie ab 5 alle aus</span>
+                </div>
+              </div>
+
+              <div class="callout">
+                <span class="ico" aria-hidden="true">∞?</span>
+                <p>
+                  Bruns Satz von 1919 zeigt: Die Summe der Kehrwerte aller Zwillinge
+                  <span class="mono">1/3 + 1/5 + 1/11 + 1/17 + …</span> konvergiert gegen
+                  etwa <b>1,9022</b>. Selbst wenn es unendlich viele gibt, sind sie also so
+                  dünn gesät, dass ihre Kehrwerte eine endliche Summe haben.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-num" aria-hidden="true">02</span>
+            <div>
+              <h2>Labor: zähle Zwillinge</h2>
+              <p class="sec-sub">Bis zu welcher Grenze willst du suchen? Gezählt wird im Browser.</p>
+            </div>
+          </div>
+
+          <div class="panel reveal">
+            <div class="slider-row" style="padding:0 0 14px">
+              <label for="twRange">bis N</label>
+              <input id="twRange" type="range" min="10000" max="1000000" step="10000" value="200000">
+              <span class="slider-val" id="twRangeOut">200&thinsp;000</span>
+            </div>
+            <p class="problem-res" id="twRes" aria-live="polite">—</p>
+            <ul class="chip-list" id="twList" aria-label="Die letzten gefundenen Paare"></ul>
+            <p class="hint" style="margin-top:14px">Gezeigt werden die letzten zwölf Paare unterhalb der Grenze.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-num" aria-hidden="true">03</span>
+            <div>
+              <h2>Die Ulam-Spirale</h2>
+              <p class="sec-sub">Zahlen in einer Spirale angeordnet: Primzahlen bilden plötzlich Diagonalen.</p>
+            </div>
+          </div>
+
+          <figure class="figure reveal">
+            <div class="fig-head">
+              <div class="fig-title"><b>Ulam-Spirale</b><span id="ulamNote">101 × 101 Zahlen</span></div>
+              <div class="fig-tools">
+                <span class="legend-item"><span class="legend-swatch" style="background:rgba(90,212,242,0.92)"></span>Primzahl</span>
+                <span class="legend-item"><span class="legend-swatch" style="background:var(--amber)"></span>Zwilling</span>
+              </div>
+            </div>
+            <div class="canvas-wrap">
+              <canvas id="ulam" class="chart" role="img" aria-label="Ulam-Spirale: Zahlen in einer Spirale angeordnet, Primzahlen hervorgehoben."></canvas>
+            </div>
+            <div class="slider-row">
+              <label for="ulamRange">Spirale</label>
+              <input id="ulamRange" type="range" min="51" max="201" step="10" value="101">
+              <span class="slider-val" id="ulamRangeOut">101²</span>
+            </div>
+            <figcaption class="fig-foot">
+              <span>1 steht in der Mitte, dann geht es spiralförmig nach außen.</span>
+              <span class="axis-note">fett: Primzahlen mit Abstand 2</span>
+            </figcaption>
+          </figure>
+
+          <div class="prose reveal" style="margin-top:28px">
+            <p>
+              Stanisław Ulam zeichnete die Spirale 1963 an einer langweiligen Konferenz auf
+              Papier. Was er sah, war kein Rauschen: Primzahlen sammeln sich auf bestimmten
+              Diagonalen. Der Grund ist algebraisch — die Diagonale entspricht quadratischen
+              Polynomen wie <span class="mono nowrap">4n² − 2n + 41</span>, die für viele n
+              prim sind, weil sie für kleine n nie einen kleinen Teiler treffen.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-num" aria-hidden="true">04</span>
+            <div>
+              <h2>Zählen gegen Schätzen</h2>
+              <p class="sec-sub">Die Anzahl der Zwillinge wächst wie x / (ln x)² — schnell genug für unendlich viele, langsam genug zum Verzweifeln.</p>
+            </div>
+          </div>
+
+          <figure class="figure reveal">
+            <div class="fig-head">
+              <div class="fig-title"><b>Zwillinge unterhalb von x</b><span>gezählt gegen Modell</span></div>
+              <div class="fig-tools">
+                <span class="legend-item"><span class="legend-swatch" style="background:var(--cyan)"></span>gezählt</span>
+                <span class="legend-item"><span class="legend-swatch" style="background:var(--amber)"></span>2C₂ · x / (ln x)²</span>
+              </div>
+            </div>
+            <div class="canvas-wrap">
+              <canvas id="twCount" class="chart" role="img" aria-label="Kumulierte Anzahl der Primzahlzwillinge bis eine Million, verglichen mit der Hardy-Littlewood-Formel."></canvas>
+            </div>
+            <figcaption class="fig-foot">
+              <span>Die Formel von Hardy und Littlewood ist eine Vermutung, kein Satz.</span>
+              <span class="axis-note">x: Grenze (log) · y: Paare</span>
+            </figcaption>
+          </figure>
+
+          <div class="prose reveal" style="margin-top:28px">
+            <p>
+              Bei 10⁶ liefert die Formel rund 6&thinsp;917 Paare, gezählt sind es
+              8&thinsp;169 — das Modell liegt hier noch 15 % zu niedrig. Für größere x nähert
+              es sich der Wahrheit an. Genau diese Formel ist der Grund, warum fast alle
+              Zahlentheoretiker an unendlich viele Zwillinge glauben: Die erwartete Anzahl
+              wächst monoton, sie fällt nie auf null.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-num" aria-hidden="true">05</span>
+            <div>
+              <h2>Was bisher geschah</h2>
+              <p class="sec-sub">2013 geschah das, was 100 Jahre lang niemand geschafft hatte: ein Beweis, dass die Lücken beschränkt bleiben.</p>
+            </div>
+          </div>
+
+          <div class="cols-2">
+            <div class="prose reveal">
+              <p>
+                <strong>Der Durchbruch.</strong> Yitang Zhang zeigte 2013, dass es unendlich
+                viele Primzahlpaare mit einem Abstand unter 70 Millionen gibt. Klingt
+                riesig — ist aber ein qualitativer Sprung: Vorher war nicht einmal bekannt,
+                dass <em>irgendein</em> fester Abstand unendlich oft vorkommt.
+              </p>
+              <p>
+                <strong>Das Rennen.</strong> Innerhalb eines Jahres drückte das Polymath-Projekt
+                die Schranke auf 246. James Maynard fand unabhängig einen einfacheren
+                Zugang. Der letzte Schritt — von 246 auf 2 — fehlt weiterhin, und niemand
+                weiß, wie er aussehen könnte.
+              </p>
+              <p>
+                <strong>Was das für Goldbach bedeutet.</strong> Die Werkzeuge, die für
+                Zwillinge entwickelt wurden — Siebmethoden, die „fast prime“ Zahlen zulassen —
+                sind dieselben, mit denen Chen 1966 seinen Satz über Goldbach bewies. Beide
+                Probleme hängen an derselben Lücke: Wir können Primzahlen in kurzen
+                Intervallen nicht fein genug kontrollieren.
+              </p>
+
+              <blockquote class="quote">
+                „Es gibt keinen offensichtlichen Grund, warum die Zwillinge aufhören sollten.“
+                <footer>die Kurzfassung des Hardy-Littlewood-Arguments von 1923</footer>
+              </blockquote>
+            </div>
+
+            <div class="reveal">
+              <h3 style="margin-bottom:16px;color:var(--muted);font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:500">Forschungsstand</h3>
+              <ol class="timeline">
+                <li><span class="year">1919</span><p><b>Viggo Brun</b> beweist die Konvergenz der Kehrwertsumme — und begründet das moderne Sieben.</p></li>
+                <li><span class="year">1923</span><p><b>Hardy &amp; Littlewood</b> formulieren die asymptotische Vermutung π₂(x) ~ 2C₂ x / (ln x)².</p></li>
+                <li><span class="year">2013</span><p><b>Yitang Zhang</b>: unendlich viele Paare mit Abstand ≤ 70&thinsp;000&thinsp;000.</p></li>
+                <li><span class="year">2014</span><p><b>Polymath8</b> und <b>Maynard</b> drücken die Schranke auf 246.</p></li>
+                <li><span class="year">2016</span><p>Der bis heute größte bekannte Zwilling: 2996863034895 · 2<sup>1290000</sup> ± 1, 388&thinsp;342 Stellen.</p></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-num" aria-hidden="true">06</span>
+            <div>
+              <h2>Die größten Lücken</h2>
+              <p class="sec-sub">Zwischen zwei Zwillingen können Hunderte Zahlen liegen — die Lücken wachsen, aber unregelmäßig.</p>
+            </div>
+          </div>
+
+          <div class="table-wrap reveal">
+            <table>
+              <caption class="sr-only">Größte Abstände zwischen aufeinanderfolgenden Primzahlzwillingen unter einer Million</caption>
+              <thead>
+                <tr><th scope="col">Lücke</th><th scope="col">von Paar</th><th scope="col">bis Paar</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="steps" data-num="1452"></td><td>850&thinsp;349 / 850&thinsp;351</td><td>851&thinsp;801 / 851&thinsp;803</td></tr>
+                <tr><td class="steps" data-num="1008"></td><td>688&thinsp;451 / 688&thinsp;453</td><td>689&thinsp;459 / 689&thinsp;461</td></tr>
+                <tr><td class="steps" data-num="960"></td><td>926&thinsp;669 / 926&thinsp;671</td><td>927&thinsp;629 / 927&thinsp;631</td></tr>
+                <tr><td class="steps" data-num="930"></td><td>687&thinsp;521 / 687&thinsp;523</td><td>688&thinsp;451 / 688&thinsp;453</td></tr>
+                <tr><td class="steps" data-num="924"></td><td>187&thinsp;907 / 187&thinsp;909</td><td>188&thinsp;831 / 188&thinsp;833</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="tbl-note">Gezählt unter allen 8&thinsp;169 Zwillingen bis 10⁶. Jede Lücke ist ein Vielfaches von 6; am häufigsten ist 30 (565-mal), dann 42 und 12.</p>
+        </div>
+      </section>
+
+    <footer class="chapter-foot">
+      <div class="wrap">
+        <div class="foot-sources">
+          <div>
+            <h4>Quellen</h4>
+            <ul>
+            <li><a href="https://de.wikipedia.org/wiki/Primzahlzwilling" target="_blank" rel="noopener noreferrer">Wikipedia: Primzahlzwilling</a></li>
+            <li><a href="https://annals.math.princeton.edu/2014/179-3/p07" target="_blank" rel="noopener noreferrer">Zhang (2013): Bounded gaps between primes</a></li>
+            <li><a href="https://arxiv.org/abs/1407.4897" target="_blank" rel="noopener noreferrer">Polymath8b: Variants of the Selberg sieve</a></li>
+            <li><a href="https://oeis.org/A001359" target="_blank" rel="noopener noreferrer">OEIS A001359 — kleinere Zwillinge</a></li>
+            </ul>
+          </div>
+
+        </div>
+        <nav class="chapter-nav" aria-label="Kapitelnavigation">
+          <a class="prev" href="#goldbach"><span class="cn-k">← Vorher</span><span class="cn-t">Goldbach-Vermutung</span></a>
+          <a class="next" href="#primzahlsatz"><span class="cn-k">Weiter →</span><span class="cn-t">Primzahlsatz</span></a>
+        </nav>
+      </div>
+    </footer>
+  </article>
+
+  <!-- ============================================================ primzahlsatz -->
+  <article class="chapter" id="primzahlsatz" hidden>
+    <header class="hero">
+      <div class="wrap">
+        <a class="back" href="#menu">← Alle Probleme</a>
+        <p class="eyebrow">Gelöst 1896 · Analysis trifft Zahlentheorie</p>
+        <h1>Die Primzahlen dünnen sich wie 1 / ln x aus.</h1>
+        <p class="lede">Gauß fiel der Zusammenhang mit 15 auf, bewiesen wurde er gut hundert Jahre später —
+     mit komplexen Zahlen. Der Primzahlsatz sagt nicht, wo die nächste Primzahl liegt. Er sagt,
+     wie viele es ungefähr gibt, und das reicht, um eine ganze Theorie darauf zu bauen.</p>
+        <div class="hero-meta"><span>π(10⁶) = <b class="num">78 498</b></span>
+        <span>x / ln x = <b class="num">72 382</b></span>
+        <span>Li(10⁶) = <b class="num">78 628</b></span>
+        <span>Verhältnis <b class="num">1,084</b></span></div>
+      </div>
+    </header>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-num" aria-hidden="true">01</span>
+            <div>
+              <h2>Die Behauptung</h2>
+              <p class="sec-sub">Nicht wo die nächste Primzahl liegt — nur wie viele es unterhalb von x sind.</p>
+            </div>
+          </div>
+
+          <div class="cols-2">
+            <div class="prose reveal">
+              <p>
+                Sei <span class="mono">π(x)</span> die Anzahl der Primzahlen bis einschließlich
+                x. Für x = 100 sind das 25, für 10⁶ schon 78&thinsp;498. Der
+                <strong>Primzahlsatz</strong> sagt, wie diese Zahl wächst:
+              </p>
+              <p class="mono" style="font-size:1.1rem;color:#fff">
+                π(x) ~ x / ln x
+              </p>
+              <p>
+                Das Zeichen ~ bedeutet: Der Quotient der beiden Seiten geht gegen 1. Nicht
+                die Differenz wird klein — die wird immer größer —, sondern das Verhältnis.
+                Für 10⁶ liegt es bei 1,084, für 10⁹ bei 1,053.
+              </p>
+              <p>
+                Carl Friedrich Gauß fiel der Zusammenhang als Jugendlichem beim Durchblättern
+                von Logarithmentafeln auf, um 1792. Bewiesen wurde er erst 1896, von Jacques
+                Hadamard und Charles de la Vallée Poussin, unabhängig voneinander — mit
+                Methoden der Funktionentheorie, also mit komplexen Zahlen.
+              </p>
+            </div>
+
+            <div class="reveal">
+              <div class="formula-block">
+                <div class="fb-row">
+                  <span class="fb-lhs">π(x) ~ x / ln x</span>
+                  <span class="fb-cond">Verhältnis → 1 für x → ∞</span>
+                </div>
+                <div class="fb-row">
+                  <span class="fb-lhs">π(10⁶) = 78 498</span>
+                  <span class="fb-cond">x / ln x = 72 382</span>
+                </div>
+              </div>
+
+              <div class="callout">
+                <span class="ico" aria-hidden="true">∫</span>
+                <p>
+                  Die bessere Näherung ist der Integrallogarithmus
+                  <span class="mono nowrap">Li(x) = ∫₂ˣ dt / ln t</span>.
+                  Für 10⁶ liefert er 78&thinsp;628 — nur 0,2 % über dem echten Wert.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-num" aria-hidden="true">02</span>
+            <div>
+              <h2>Labor: zähle Primzahlen</h2>
+              <p class="sec-sub">Wähle eine Zehnerpotenz — π(x) wird gesiebt, nicht nachgeschlagen.</p>
+            </div>
+          </div>
+
+          <div class="panel reveal">
+            <div class="slider-row" style="padding:0 0 16px">
+              <label for="piRange">bis x =</label>
+              <input id="piRange" type="range" min="3" max="6" step="1" value="5">
+              <span class="slider-val" id="piRangeOut">10⁵</span>
+            </div>
+            <dl class="stats" style="margin-top:0">
+              <div class="stat is-accent"><dt>π(x) gezählt</dt><dd id="piCount">—</dd></div>
+              <div class="stat"><dt>x / ln x</dt><dd id="piAsym">—</dd></div>
+              <div class="stat"><dt>Li(x)</dt><dd id="piLi">—</dd></div>
+              <div class="stat is-warm"><dt>Verhältnis</dt><dd id="piRatio">—</dd></div>
+            </dl>
+            <p class="hint" style="margin-top:16px">
+              Das Verhältnis π(x) / (x/ln x) fällt langsam gegen 1 — von oben.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-num" aria-hidden="true">03</span>
+            <div>
+              <h2>Zwei Kurven, ein Abstand</h2>
+              <p class="sec-sub">Logarithmische x-Achse: Jede Stufe ist eine Zehnerpotenz.</p>
+            </div>
+          </div>
+
+          <figure class="figure reveal">
+            <div class="fig-head">
+              <div class="fig-title"><b>π(x) gegen x / ln x</b><span id="piNote">bis 10⁵</span></div>
+              <div class="fig-tools">
+                <span class="legend-item"><span class="legend-swatch" style="background:var(--cyan)"></span>π(x)</span>
+                <span class="legend-item"><span class="legend-swatch" style="background:var(--amber)"></span>x / ln x</span>
+              </div>
+            </div>
+            <div class="canvas-wrap">
+              <canvas id="piChart" class="chart" role="img" aria-label="Primzahlfunktion und x durch Logarithmus von x bis eine Million."></canvas>
+            </div>
+            <div class="slider-row">
+              <label for="piRangeBig">bis x =</label>
+              <input id="piRangeBig" type="range" min="3" max="6" step="1" value="6">
+              <span class="slider-val" id="piRangeBigOut">10⁶</span>
+            </div>
+            <figcaption class="fig-foot">
+              <span>Die Fläche dazwischen ist die Unterschätzung durch x / ln x.</span>
+              <span class="axis-note">x: Grenze (log) · y: Primzahlen</span>
+            </figcaption>
+          </figure>
+
+          <div class="prose reveal" style="margin-top:28px">
+            <p>
+              x / ln x unterschätzt systematisch. Der Grund ist, dass die Dichte der
+              Primzahlen an der Stelle t genauer 1/ln t ist als 1/ln x — und 1/ln t ist für
+              t &lt; x kleiner, was den Fehler über die Strecke aufsummiert. Genau das
+              korrigiert der Integrallogarithmus.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-num" aria-hidden="true">04</span>
+            <div>
+              <h2>Das Verhältnis</h2>
+              <p class="sec-sub">Der eigentliche Inhalt des Satzes: π(x)·ln x / x geht gegen 1.</p>
+            </div>
+          </div>
+
+          <figure class="figure reveal">
+            <div class="fig-head">
+              <div class="fig-title"><b>π(x) · ln x / x</b><span>die Konvergenz, direkt gemessen</span></div>
+              <div class="fig-tools">
+                <span class="legend-item"><span class="legend-swatch" style="background:var(--amber)"></span>Grenzwert 1</span>
+              </div>
+            </div>
+            <div class="canvas-wrap">
+              <canvas id="ratioChart" class="chart" role="img" aria-label="Verhältnis von Primzahlfunktion zum Logarithmus-Ausdruck, das gegen eins strebt."></canvas>
+            </div>
+            <figcaption class="fig-foot">
+              <span>Der Ausschlag bei kleinen x ist echt: Für 10 ist das Verhältnis 0,92, für 100 schon 1,15.</span>
+              <span class="axis-note">x: Grenze (log) · y: Verhältnis</span>
+            </figcaption>
+          </figure>
+
+          <div class="prose reveal" style="margin-top:28px">
+            <p>
+              Die Kurve fällt von einem Hoch bei etwa 10³ langsam gegen 1. Nach 10⁶ steht sie
+              bei 1,084, nach 10⁹ bei 1,053. Das ist der Grund, warum „π(x) ≈ x/ln x“ auf
+              kleine Zahlen schlecht anwendbar ist und warum Tabellen lieber Li(x) benutzen.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-num" aria-hidden="true">05</span>
+            <div>
+              <h2>Warum das ein Satz über Analysis ist</h2>
+              <p class="sec-sub">Der Beweis benutzt keine Zahlentheorie, sondern Funktionen einer komplexen Variablen.</p>
+            </div>
+          </div>
+
+          <div class="cols-2">
+            <div class="prose reveal">
+              <p>
+                <strong>Eulers Produkt.</strong> 1737 zeigte Euler, dass die Summe der
+                Kehrwerte aller Primzahlen divergiert — und dass sich die
+                Riemannsche Zetafunktion als Produkt über alle Primzahlen schreiben lässt.
+                Damit war eine Brücke zwischen Primzahlen und Analysis gebaut.
+              </p>
+              <p>
+                <strong>Riemanns Schritt.</strong> 1859 betrachtete Riemann ζ als Funktion
+                komplexer Zahlen und bemerkte: Die Lage ihrer Nullstellen steuert, wie
+                gleichmäßig die Primzahlen verteilt sind. Der Primzahlsatz folgt daraus,
+                dass es keine Nullstellen mit Realteil 1 gibt.
+              </p>
+              <p>
+                <strong>Der Beweis.</strong> Genau das zeigten Hadamard und de la Vallée
+                Poussin 1896. Einen „elementaren“ Beweis ohne komplexe Analysis fanden
+                Erdős und Selberg 1949 — er ist kürzer im Werkzeugkasten, aber nicht
+                einfacher im Argument.
+              </p>
+
+              <blockquote class="quote">
+                „Die Primzahlen sind die Bausteine der Zahlen — und ihr Wachstum ist das
+                Fenster, durch das man sie sieht.“
+                <footer>die Idee hinter der Zetafunktion, frei nach Riemann 1859</footer>
+              </blockquote>
+            </div>
+
+            <div class="reveal">
+              <h3 style="margin-bottom:16px;color:var(--muted);font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:500">Forschungsstand</h3>
+              <ol class="timeline">
+                <li><span class="year">1737</span><p><b>Euler</b> beweist die Divergenz der Primzahl-Kehrsumme und findet die Produktformel.</p></li>
+                <li><span class="year">1792</span><p><b>Gauß</b> vermutet π(x) ~ x/ln x anhand von Logarithmentafeln.</p></li>
+                <li><span class="year">1859</span><p><b>Riemann</b> verbindet Primzahlen mit den Nullstellen der Zetafunktion.</p></li>
+                <li><span class="year">1896</span><p><b>Hadamard</b> und <b>de la Vallée Poussin</b> beweisen den Primzahlsatz.</p></li>
+                <li><span class="year">1949</span><p><b>Erdős</b> und <b>Selberg</b> geben einen elementaren Beweis.</p></li>
+                <li><span class="year">2001</span><p>Computer verifizieren die Riemannsche Vermutung für die ersten 10¹³ Nullstellen — der Beweis fehlt weiter.</p></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-num" aria-hidden="true">06</span>
+            <div>
+              <h2>Die Tabelle</h2>
+              <p class="sec-sub">Gezählt gegen geschätzt, für jede Zehnerpotenz.</p>
+            </div>
+          </div>
+
+          <div class="table-wrap reveal">
+            <table>
+              <caption class="sr-only">Primzahlfunktion, x durch Logarithmus und Integrallogarithmus für Zehnerpotenzen</caption>
+              <thead>
+                <tr><th scope="col">x</th><th scope="col">π(x)</th><th scope="col">x / ln x</th><th scope="col">Li(x)</th><th scope="col">π / (x/ln x)</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>10</td><td class="steps" data-num="4"></td><td data-num="4"></td><td class="peak" data-num="6"></td><td>0,921</td></tr>
+                <tr><td>100</td><td class="steps" data-num="25"></td><td data-num="22"></td><td class="peak" data-num="30"></td><td>1,151</td></tr>
+                <tr><td>1&thinsp;000</td><td class="steps" data-num="168"></td><td data-num="145"></td><td class="peak" data-num="178"></td><td>1,161</td></tr>
+                <tr><td>10&thinsp;000</td><td class="steps" data-num="1229"></td><td data-num="1086"></td><td class="peak" data-num="1246"></td><td>1,132</td></tr>
+                <tr><td>100&thinsp;000</td><td class="steps" data-num="9592"></td><td data-num="8686"></td><td class="peak" data-num="9630"></td><td>1,104</td></tr>
+                <tr><td>1&thinsp;000&thinsp;000</td><td class="steps" data-num="78498"></td><td data-num="72382"></td><td class="peak" data-num="78628"></td><td>1,084</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="tbl-note">Li(x) liegt näher an π(x) als x/ln x — aber von oben, und der Abstand wächst mit jeder Zehnerpotenz.</p>
+        </div>
+      </section>
+
+    <footer class="chapter-foot">
+      <div class="wrap">
+        <div class="foot-sources">
+          <div>
+            <h4>Quellen</h4>
+            <ul>
+            <li><a href="https://de.wikipedia.org/wiki/Primzahlsatz" target="_blank" rel="noopener noreferrer">Wikipedia: Primzahlsatz</a></li>
+            <li><a href="https://oeis.org/A006880" target="_blank" rel="noopener noreferrer">OEIS A006880 — π(10^n)</a></li>
+            <li><a href="https://www.claymath.org/millennium-problems/riemann-hypothesis" target="_blank" rel="noopener noreferrer">Clay Institute: Riemann Hypothesis</a></li>
+            <li><a href="https://de.wikipedia.org/wiki/Riemannsche_Vermutung" target="_blank" rel="noopener noreferrer">Wikipedia: Riemannsche Vermutung</a></li>
+            </ul>
+          </div>
+
+        </div>
+        <nav class="chapter-nav" aria-label="Kapitelnavigation">
+          <a class="prev" href="#zwillinge"><span class="cn-k">← Vorher</span><span class="cn-t">Primzahlzwillinge</span></a>
+          <a class="next" href="#ziegenproblem"><span class="cn-k">Weiter →</span><span class="cn-t">Ziegenproblem</span></a>
+        </nav>
+      </div>
+    </footer>
+  </article>
+
+  <!-- ============================================================ ziegenproblem -->
+  <article class="chapter" id="ziegenproblem" hidden>
+    <header class="hero">
+      <div class="wrap">
+        <a class="back" href="#menu">← Alle Probleme</a>
+        <p class="eyebrow">Gelöst · Wahrscheinlichkeit</p>
+        <h1>Wechseln verdoppelt deine Chancen.</h1>
+        <p class="lede">Drei Türen, ein Auto, zwei Ziegen. Der Moderator öffnet eine Tür mit Ziege — und
+     plötzlich stehen die Chancen nicht 50 : 50, sondern ⅔ : ⅓. Der Grund ist nicht
+     Zauberei, sondern die Regel des Moderators.</p>
+        <div class="hero-meta"><span>bleiben <b>⅓</b></span>
+        <span>wechseln <b>⅔</b></span>
+        <span><b>9</b> gleich wahrscheinliche Fälle</span>
+        <span>seit <b>1975</b></span></div>
+      </div>
+    </header>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-num" aria-hidden="true">01</span>
+            <div>
+              <h2>Die Regeln</h2>
+              <p class="sec-sub">Der Moderator weiß, wo das Auto steht — und das ist der ganze Trick.</p>
+            </div>
+          </div>
+
+          <div class="cols-2">
+            <div class="prose reveal">
+              <p>
+                Drei Türen, dahinter ein Auto und zwei Ziegen. Du wählst eine Tür. Der
+                Moderator — der weiß, wo das Auto steht — öffnet eine der beiden anderen
+                Türen und zeigt eine Ziege. Dann fragt er: bleiben oder wechseln?
+              </p>
+              <p>
+                Die Intuition sagt: zwei Türen übrig, also fünfzig zu fünfzig. Das ist
+                falsch, weil der Moderator <em>nicht zufällig</em> öffnet. Er muss eine
+                Ziege zeigen und darf deine Tür nicht anfassen. Damit steckt in seiner
+                Handlung Information: Er hat eine Tür ausgewählt, die er zeigen
+                <em>konnte</em> — und das gelang ihm nur, weil die andere geschlossen
+                geblieben ist.
+              </p>
+              <p>
+                Sauber gerechnet: Deine erste Wahl ist mit Wahrscheinlichkeit ⅓ richtig. In
+                diesen ⅓ der Fälle verliert Wechseln. In den anderen ⅔ steht das Auto hinter
+                einer der beiden übrigen Türen — und der Moderator räumt die Ziege weg.
+                Wechseln gewinnt also in ⅔ der Fälle.
+              </p>
+            </div>
+
+            <div class="reveal">
+              <div class="formula-block">
+                <div class="fb-row">
+                  <span class="fb-lhs">P(bleiben gewinnt) = ⅓</span>
+                  <span class="fb-cond">die erste Wahl war richtig</span>
+                </div>
+                <div class="fb-row">
+                  <span class="fb-lhs">P(wechseln gewinnt) = ⅔</span>
+                  <span class="fb-cond">die erste Wahl war falsch</span>
+                </div>
+              </div>
+
+              <div class="callout">
+                <span class="ico" aria-hidden="true">i</span>
+                <p>
+                  Entscheidend ist die <b>Regel des Moderators</b>, nicht die Anzahl der
+                  Türen. Öffnet er ahnungslos und zeigt zufällig eine Ziege, sind es
+                  50 : 50. Dieselbe Situation, eine andere Regel — ein anderes Ergebnis.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-num" aria-hidden="true">02</span>
+            <div>
+              <h2>Das Spiel</h2>
+              <p class="sec-sub">Spiel es selbst — und simuliere danach zehntausend Runden.</p>
+            </div>
+          </div>
+
+          <div class="panel reveal">
+            <div class="doors" role="group" aria-label="Drei Türen">
+              <button class="door" type="button" data-door="0" aria-label="Tür 1"><span class="door-num">1</span><span class="door-face" aria-hidden="true"></span></button>
+              <button class="door" type="button" data-door="1" aria-label="Tür 2"><span class="door-num">2</span><span class="door-face" aria-hidden="true"></span></button>
+              <button class="door" type="button" data-door="2" aria-label="Tür 3"><span class="door-num">3</span><span class="door-face" aria-hidden="true"></span></button>
+            </div>
+
+            <div class="controls" style="margin:16px 0 0">
+              <button class="btn" id="montyStay" type="button">Bleiben</button>
+              <button class="btn btn-primary" id="montySwitch" type="button">Wechseln</button>
+              <button class="btn" id="montyReset" type="button">Neues Spiel</button>
+              <button class="btn" id="montySim" type="button">10&thinsp;000 Spiele simulieren</button>
+            </div>
+
+            <p class="monty-msg" id="montyMsg" aria-live="polite" style="margin-top:16px">Wähle eine Tür.</p>
+
+            <div class="bars" id="montyBars" style="margin-top:10px">
+              <div class="bar-row">
+                <span class="bar-label">bleiben</span>
+                <span class="bar-track"><span class="bar-fill bar-stay" id="barStay"></span></span>
+                <span class="bar-val" id="barStayVal">—</span>
+              </div>
+              <div class="bar-row">
+                <span class="bar-label">wechseln</span>
+                <span class="bar-track"><span class="bar-fill bar-switch" id="barSwitch"></span></span>
+                <span class="bar-val" id="barSwitchVal">—</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-num" aria-hidden="true">03</span>
+            <div>
+              <h2>Die neun Fälle</h2>
+              <p class="sec-sub">Es gibt genau neun gleich wahrscheinliche Kombinationen aus Autotür und deiner Wahl. Zähle mit.</p>
+            </div>
+          </div>
+
+          <ul class="cases reveal">
+              <li class="case is-lose"><b>Auto 1 · Wahl 1</b><span>Moderator öffnet 2</span><span class="case-out">Wechseln verliert</span></li>
+              <li class="case is-win"><b>Auto 1 · Wahl 2</b><span>Moderator öffnet 3</span><span class="case-out">Wechseln gewinnt</span></li>
+              <li class="case is-win"><b>Auto 1 · Wahl 3</b><span>Moderator öffnet 2</span><span class="case-out">Wechseln gewinnt</span></li>
+              <li class="case is-win"><b>Auto 2 · Wahl 1</b><span>Moderator öffnet 3</span><span class="case-out">Wechseln gewinnt</span></li>
+              <li class="case is-lose"><b>Auto 2 · Wahl 2</b><span>Moderator öffnet 1</span><span class="case-out">Wechseln verliert</span></li>
+              <li class="case is-win"><b>Auto 2 · Wahl 3</b><span>Moderator öffnet 1</span><span class="case-out">Wechseln gewinnt</span></li>
+              <li class="case is-win"><b>Auto 3 · Wahl 1</b><span>Moderator öffnet 2</span><span class="case-out">Wechseln gewinnt</span></li>
+              <li class="case is-win"><b>Auto 3 · Wahl 2</b><span>Moderator öffnet 1</span><span class="case-out">Wechseln gewinnt</span></li>
+              <li class="case is-lose"><b>Auto 3 · Wahl 3</b><span>Moderator öffnet 1</span><span class="case-out">Wechseln verliert</span></li>
+          </ul>
+          <p class="matrix-note">
+            Sechs Zellen grün, drei bernsteinfarben: Wechseln gewinnt in 6 von 9 Fällen —
+            also ⅔. Die neun Fälle sind der kürzeste vollständige Beweis des Ergebnisses.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-num" aria-hidden="true">04</span>
+            <div>
+              <h2>Wie schnell es konvergiert</h2>
+              <p class="sec-sub">Nach 200 Spielen ist der Unterschied sichtbar, nach 2000 ist er stabil.</p>
+            </div>
+          </div>
+
+          <figure class="figure reveal">
+            <div class="fig-head">
+              <div class="fig-title"><b>Gewinnquote über die Zeit</b><span id="montyChartNote">5 000 simulierte Spiele</span></div>
+              <div class="fig-tools">
+                <span class="legend-item"><span class="legend-swatch" style="background:var(--cyan)"></span>wechseln</span>
+                <span class="legend-item"><span class="legend-swatch" style="background:var(--amber)"></span>bleiben</span>
+              </div>
+            </div>
+            <div class="canvas-wrap">
+              <canvas id="montyChart" class="chart" role="img" aria-label="Kumulierte Gewinnquote von Wechseln und Bleiben über fünftausend simulierte Spiele."></canvas>
+            </div>
+            <figcaption class="fig-foot">
+              <span>Gestrichelt: die Grenzwerte ⅔ und ⅓.</span>
+              <span class="axis-note">x: gespielte Runden · y: Gewinnquote</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-num" aria-hidden="true">05</span>
+            <div>
+              <h2>Geschichte und Varianten</h2>
+              <p class="sec-sub">Die Antwort ist einfach. Der Streit darüber war es nicht.</p>
+            </div>
+          </div>
+
+          <div class="cols-2">
+            <div class="prose reveal">
+              <p>
+                1975 beschrieb Steve Selvin das Problem im <em>American Statistician</em>,
+                benannt nach der Quizshow „Let’s Make a Deal“ und ihrem Moderator Monty Hall.
+                Richtig berühmt wurde es 1990 durch Marilyn vos Savants Kolumne in
+                <em>Parade</em>: Sie antwortete, Wechseln sei besser — und bekam tausende
+                Leserbriefe, darunter viele von Mathematikern, die ihr Fehler vorwarfen.
+              </p>
+              <p>
+                Interessant ist, dass beide Seiten recht haben können: Das Ergebnis hängt
+                vollständig davon ab, was der Moderator tut. Ändert man seine Regel, ändert
+                sich die Wahrscheinlichkeit — und genau das macht das Problem zu einem guten
+                Test für sauberes Denken über bedingte Wahrscheinlichkeiten.
+              </p>
+              <p>
+                Formal ist es ein Fall für die Bayes-Regel: Die geöffnete Tür ist ein
+                Ereignis, dessen Eintreten von deiner Wahl abhängt. Wer das ignoriert,
+                landet bei ½ — und liegt daneben.
+              </p>
+            </div>
+
+            <div class="reveal">
+              <h3 style="margin-bottom:16px;color:var(--muted);font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:500">Varianten</h3>
+              <div class="table-wrap">
+                <table>
+                  <caption class="sr-only">Gewinnchancen in Varianten des Ziegenproblems</caption>
+                  <thead><tr><th scope="col">Regel</th><th scope="col">bleiben</th><th scope="col">wechseln</th></tr></thead>
+                  <tbody>
+                    <tr><td>Moderator weiß es, öffnet immer eine Ziege</td><td>⅓</td><td class="steps">⅔</td></tr>
+                    <tr><td>Moderator rät, zeigt zufällig eine Ziege</td><td>½</td><td>½</td></tr>
+                    <tr><td>Vier Türen, zwei Ziegen geöffnet</td><td>¼</td><td class="steps">¾</td></tr>
+                    <tr><td>Er öffnet nur, wenn du richtig liegst</td><td>1</td><td>0</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="tbl-note">
+                Gleiche Türen, gleiche Ziegen — andere Regel, anderes Ergebnis. Deshalb ist
+                „⅔“ keine Eigenschaft des Spiels, sondern der Regel.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <footer class="chapter-foot">
+      <div class="wrap">
+        <div class="foot-sources">
+          <div>
+            <h4>Quellen</h4>
+            <ul>
+            <li><a href="https://de.wikipedia.org/wiki/Ziegenproblem" target="_blank" rel="noopener noreferrer">Wikipedia: Ziegenproblem</a></li>
+            <li><a href="https://doi.org/10.1080/00031305.1975.10479121" target="_blank" rel="noopener noreferrer">Selvin (1975): Letters to the Editor, The American Statistician</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Marilyn_vos_Savant" target="_blank" rel="noopener noreferrer">vos Savant (1990): Ask Marilyn, Parade</a></li>
+            </ul>
+          </div>
+
+        </div>
+        <nav class="chapter-nav" aria-label="Kapitelnavigation">
+          <a class="prev" href="#primzahlsatz"><span class="cn-k">← Vorher</span><span class="cn-t">Primzahlsatz</span></a>
+          <a class="next" href="#geburtstag"><span class="cn-k">Weiter →</span><span class="cn-t">Geburtstagsparadoxon</span></a>
+        </nav>
+      </div>
+    </footer>
+  </article>
+
+  <!-- ============================================================ geburtstag -->
+  <article class="chapter" id="geburtstag" hidden>
+    <header class="hero">
+      <div class="wrap">
+        <a class="back" href="#menu">← Alle Probleme</a>
+        <p class="eyebrow">Gelöst · Wahrscheinlichkeit</p>
+        <h1>23 Personen reichen für eine Münzwette.</h1>
+        <p class="lede">Wie viele Menschen braucht man, damit zwei am selben Tag Geburtstag haben? Die
+     meisten schätzen 180. Die richtige Antwort ist 23 — weil nicht die Personen zählen,
+     sondern die Paare, und die wachsen quadratisch.</p>
+        <div class="hero-meta"><span><b class="num">50,7 %</b> bei 23 Personen</span>
+        <span><b class="num">253</b> Paare</span>
+        <span><b class="num">99,0 %</b> bei 57</span>
+        <span>Faustformel <b>1,18·√365</b></span></div>
+      </div>
+    </header>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-num" aria-hidden="true">01</span>
+            <div>
+              <h2>Die Behauptung</h2>
+              <p class="sec-sub">Nicht wie viele Personen — wie viele Paare. Das ist der ganze Trick.</p>
+            </div>
+          </div>
+
+          <div class="cols-2">
+            <div class="prose reveal">
+              <p>
+                Wie viele Personen braucht man, damit die Wahrscheinlichkeit, dass zwei am
+                selben Tag Geburtstag haben, über 50 % liegt? Die meisten schätzen 180 — die
+                Hälfte von 365. Richtig sind <strong>23</strong>.
+              </p>
+              <p>
+                Der Denkfehler: Man vergleicht mit dem eigenen Geburtstag und fragt, ob
+                jemand anderes ihn teilt. Gefragt ist aber, ob <em>irgendein</em> Paar
+                zusammenpasst. Bei 23 Personen gibt es
+                <span class="mono nowrap">23 · 22 / 2 = 253</span> Paare — und jedes davon
+                hat die Chance 1/365.
+              </p>
+              <p>
+                Sauber rechnet man über das Gegenereignis: Alle Geburtstage verschieden.
+                Die erste Person ist frei, die zweite darf 364 von 365 Tagen treffen, die
+                dritte 363 — und so weiter. Das Produkt fällt schneller, als man denkt.
+              </p>
+            </div>
+
+            <div class="reveal">
+              <div class="formula-block">
+                <div class="fb-row">
+                  <span class="fb-lhs">P(k) = 1 − 365·364·…·(365−k+1) / 365ᵏ</span>
+                  <span class="fb-cond">k Personen, 365 Tage</span>
+                </div>
+                <div class="fb-row">
+                  <span class="fb-lhs">P(23) = 0,507</span>
+                  <span class="fb-cond">253 Paare im Spiel</span>
+                </div>
+              </div>
+
+              <div class="callout">
+                <span class="ico" aria-hidden="true">n²</span>
+                <p>
+                  Die Zahl der Paare wächst quadratisch, die Zahl der Personen nur linear.
+                  Deshalb reicht <b>√(2 · 365 · ln 2) ≈ 22,5</b> — die Wurzel aus der
+                  Tageszahl, nicht die Hälfte.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-num" aria-hidden="true">02</span>
+            <div>
+              <h2>Rechner</h2>
+              <p class="sec-sub">Stelle die Gruppengröße ein und vergleiche mit einer Simulation.</p>
+            </div>
+          </div>
+
+          <div class="panel reveal">
+            <div class="slider-row" style="padding:0 0 14px">
+              <label for="bdRange">Personen</label>
+              <input id="bdRange" type="range" min="2" max="80" step="1" value="23">
+              <span class="slider-val" id="bdRangeOut">23</span>
+            </div>
+            <p class="problem-res" id="bdRes" aria-live="polite">—</p>
+            <div class="controls" style="margin-top:12px">
+              <button class="btn" id="bdSim" type="button">2&thinsp;000 Räume simulieren</button>
+              <button class="btn" id="bdReset" type="button">Simulation zurücksetzen</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-num" aria-hidden="true">03</span>
+            <div>
+              <h2>Die Kurve</h2>
+              <p class="sec-sub">Sie steigt früh und steil — und flacht dann gegen 100 % ab.</p>
+            </div>
+          </div>
+
+          <figure class="figure reveal">
+            <div class="fig-head">
+              <div class="fig-title"><b>Wahrscheinlichkeit eines gemeinsamen Geburtstags</b><span id="bdNote">k = 23</span></div>
+              <div class="fig-tools">
+                <span class="legend-item"><span class="legend-swatch" style="background:var(--green)"></span>P(k)</span>
+                <span class="legend-item"><span class="legend-swatch" style="background:var(--amber)"></span>50 %</span>
+              </div>
+            </div>
+            <div class="canvas-wrap">
+              <canvas id="bdChart" class="chart" role="img" aria-label="Kurve der Wahrscheinlichkeit für einen gemeinsamen Geburtstag je Gruppengröße."></canvas>
+            </div>
+            <figcaption class="fig-foot">
+              <span>Gestrichelt die 50 %-Marke: Sie wird zwischen 22 und 23 Personen überschritten.</span>
+              <span class="axis-note">x: Personen · y: Wahrscheinlichkeit</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-num" aria-hidden="true">04</span>
+            <div>
+              <h2>Warum 23 reicht</h2>
+              <p class="sec-sub">Jede Linie ist ein Paar. Bei 23 Personen sind es 253.</p>
+            </div>
+          </div>
+
+          <div class="two-col">
+            <figure class="figure reveal">
+              <div class="canvas-wrap">
+                <canvas id="bdChords" class="chart" role="img" aria-label="Kreis aus Personen, alle Verbindungslinien zwischen ihnen als Paare."></canvas>
+              </div>
+              <div class="slider-row">
+                <label for="bdChordRange">Personen</label>
+                <input id="bdChordRange" type="range" min="2" max="40" step="1" value="23">
+                <span class="slider-val" id="bdChordOut">23</span>
+              </div>
+              <figcaption class="fig-foot">
+                <span class="axis-note" id="bdChordNote">253 Paare</span>
+              </figcaption>
+            </figure>
+
+            <div class="prose reveal">
+              <p>
+                Die Zahl der Paare ist <span class="mono">k(k−1)/2</span>. Bei 10 Personen
+                sind das 45, bei 23 schon 253, bei 40 über 780. Jedes Paar hat eine Chance
+                von 1/365, denselben Tag zu treffen — und die Chancen addieren sich
+                näherungsweise, solange sie klein sind.
+              </p>
+              <p>
+                Deshalb ist das Ergebnis auch nicht vom Kalender abhängig: Auf dem Mars mit
+                668 Tagen bräuchte man 31 Personen, nicht 23. Die Faustformel ist
+                <span class="mono nowrap">k ≈ 1,18 · √Tage</span>.
+              </p>
+              <p>
+                Und deshalb heißt es <em>Paradox</em>: Die Rechnung ist trivial, der
+                Instinkt liegt trotzdem daneben.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-num" aria-hidden="true">05</span>
+            <div>
+              <h2>Wo das wirklich zählt</h2>
+              <p class="sec-sub">Überall, wo Zufallswerte kollidieren können — Hashes, IDs, Prüfsummen.</p>
+            </div>
+          </div>
+
+          <div class="pre-sec prose reveal" style="max-width:70ch">
+            <p>
+              Ein 128-Bit-Hash hat 2¹²⁸ mögliche Werte. Nach dem Geburtstagsparadoxon
+              genügen aber schon rund 2⁶⁴ ≈ 1,8 · 10¹⁹ Versuche, um mit hoher
+              Wahrscheinlichkeit <em>irgendeine</em> Kollision zu finden — nicht 2¹²⁸.
+              Genau darauf beruht der <strong>Birthday Attack</strong> gegen Hashfunktionen:
+              Man muss nicht ein bestimmtes Ziel treffen, nur irgendeines.
+            </p>
+            <p>
+              MD5 und SHA-1 sind daran gescheitert, SHA-256 nicht. Die Faustregel für die
+              Sicherheit eines n-Bit-Hashes ist deshalb n/2 Bit Kollisionsresistenz — eine
+              direkte Anwendung eines Problems, das meist als Partytrick erzählt wird.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-num" aria-hidden="true">06</span>
+            <div>
+              <h2>Die Werte</h2>
+              <p class="sec-sub">Exakt gerechnet, nicht geschätzt.</p>
+            </div>
+          </div>
+
+          <div class="table-wrap reveal">
+            <table>
+              <caption class="sr-only">Wahrscheinlichkeit eines gemeinsamen Geburtstags je Gruppengröße</caption>
+              <thead><tr><th scope="col">Personen</th><th scope="col">Paare</th><th scope="col">P(gemeinsam)</th></tr></thead>
+              <tbody>
+                <tr><td>10</td><td data-num="45"></td><td class="steps">11,7 %</td></tr>
+                <tr><td>20</td><td data-num="190"></td><td class="steps">41,1 %</td></tr>
+                <tr><td>23</td><td data-num="253"></td><td class="steps">50,7 %</td></tr>
+                <tr><td>30</td><td data-num="435"></td><td class="steps">70,6 %</td></tr>
+                <tr><td>40</td><td data-num="780"></td><td class="steps">89,1 %</td></tr>
+                <tr><td>57</td><td data-num="1596"></td><td class="steps">99,0 %</td></tr>
+                <tr><td>70</td><td data-num="2415"></td><td class="steps">99,9 %</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="tbl-note">Ab 70 Personen ist die Gegenwahrscheinlichkeit kleiner als ein Promille.</p>
+        </div>
+      </section>
+
+    <footer class="chapter-foot">
+      <div class="wrap">
+        <div class="foot-sources">
+          <div>
+            <h4>Quellen</h4>
+            <ul>
+            <li><a href="https://de.wikipedia.org/wiki/Geburtstagsparadoxon" target="_blank" rel="noopener noreferrer">Wikipedia: Geburtstagsparadoxon</a></li>
+            <li><a href="https://de.wikipedia.org/wiki/Geburtstagsangriff" target="_blank" rel="noopener noreferrer">Wikipedia: Birthday Attack</a></li>
+            </ul>
+          </div>
+
+        </div>
+        <nav class="chapter-nav" aria-label="Kapitelnavigation">
+          <a class="prev" href="#ziegenproblem"><span class="cn-k">← Vorher</span><span class="cn-t">Ziegenproblem</span></a>
+          <a class="next" href="#buffon"><span class="cn-k">Weiter →</span><span class="cn-t">Buffons Nadelproblem</span></a>
+        </nav>
+      </div>
+    </footer>
+  </article>
+
+  <!-- ============================================================ buffon -->
+  <article class="chapter" id="buffon" hidden>
+    <header class="hero">
+      <div class="wrap">
+        <a class="back" href="#menu">← Alle Probleme</a>
+        <p class="eyebrow">Gelöst 1777 · Geometrische Wahrscheinlichkeit</p>
+        <h1>Nadeln werfen, π schätzen.</h1>
+        <p class="lede">Ein Zufallsexperiment mit einer Wahrscheinlichkeit, in der π steckt: Wirft man Nadeln
+     auf liniertes Papier, lässt sich aus der Trefferquote der Kreisumfang zurückrechnen.
+     Klingt nach Zauberei, ist Geometrie — und ein früher Vorfahre der Monte-Carlo-Methoden.</p>
+        <div class="hero-meta"><span>P = <b>2L / (πd)</b></span>
+        <span>Trefferquote <b class="num">50,9 %</b> bei L/d = 0,8</span>
+        <span>Fehler <b>~ 1/√N</b></span>
+        <span>seit <b>1777</b></span></div>
+      </div>
+    </header>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-num" aria-hidden="true">01</span>
+            <div>
+              <h2>Die Idee</h2>
+              <p class="sec-sub">Ein Zufallsexperiment, dessen Wahrscheinlichkeit π enthält — also lässt sich π daraus zurückrechnen.</p>
+            </div>
+          </div>
+
+          <div class="cols-2">
+            <div class="prose reveal">
+              <p>
+                Du wirfst eine Nadel der Länge L zufällig auf Papier, auf dem im Abstand d
+                parallele Linien gezogen sind. Wie wahrscheinlich ist es, dass die Nadel eine
+                Linie kreuzt?
+              </p>
+              <p>
+                Die Antwort hängt nur vom Verhältnis L/d ab:
+              </p>
+              <p class="mono" style="font-size:1.15rem;color:#fff">P = 2L / (πd)</p>
+              <p>
+                Da π im Nenner steht, lässt es sich aus der Trefferquote zurückgewinnen:
+                <span class="mono nowrap">π ≈ 2L·N / (d·C)</span>, wobei N die Zahl der
+                Würfe und C die Zahl der Treffer ist. Man muss also nur zählen — und das
+                kann ein Computer sehr oft tun.
+              </p>
+              <p>
+                In der Herleitung integriert man über alle Winkel: Für einen Winkel θ ist die
+                horizontale Ausdehnung der Nadel <span class="mono">L·|cos θ|</span>. Der
+                Erwartungswert dieses Ausdrucks über θ ∈ [0, π/2] ist 2L/π — und geteilt
+                durch den Linienabstand d ergibt das genau die Trefferwahrscheinlichkeit.
+              </p>
+            </div>
+
+            <div class="reveal">
+              <div class="formula-block">
+                <div class="fb-row">
+                  <span class="fb-lhs">P = 2L / (πd)</span>
+                  <span class="fb-cond">Trefferwahrscheinlichkeit</span>
+                </div>
+                <div class="fb-row">
+                  <span class="fb-lhs">π ≈ 2L·N / (d·C)</span>
+                  <span class="fb-cond">Schätzung aus N Würfen, C Treffern</span>
+                </div>
+              </div>
+
+              <div class="callout">
+                <span class="ico" aria-hidden="true">π</span>
+                <p>
+                  Bei L/d = 0,8 kreuzt rund jede zweite Nadel eine Linie — die Schätzung
+                  konvergiert mit <b>1/√N</b>, also braucht jede zusätzliche Dezimalstelle
+                  hundertmal mehr Würfe.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-num" aria-hidden="true">02</span>
+            <div>
+              <h2>Labor: wirf Nadeln</h2>
+              <p class="sec-sub">Jeder Klick wirft hundert Nadeln. Die gelben kreuzen eine Linie.</p>
+            </div>
+          </div>
+
+          <div class="panel reveal">
+            <div class="controls">
+              <button class="btn btn-primary" id="buffonThrow" type="button">100 Nadeln werfen</button>
+              <button class="btn" id="buffonThrow1000" type="button">1&thinsp;000 werfen</button>
+              <button class="btn" id="buffonReset" type="button">Zurücksetzen</button>
+            </div>
+            <div class="slider-row" style="padding:14px 0 6px">
+              <label for="buffonLRange">Nadellänge L/d</label>
+              <input id="buffonLRange" type="range" min="0.2" max="1" step="0.05" value="0.8">
+              <span class="slider-val" id="buffonLOut">0,80</span>
+            </div>
+            <p class="problem-res" id="buffonRes" aria-live="polite">Noch keine Nadeln gefallen.</p>
+            <p class="hint">Eine Längenänderung setzt das Experiment zurück, weil sich die Wahrscheinlichkeit ändert.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-num" aria-hidden="true">03</span>
+            <div>
+              <h2>Das Papier</h2>
+              <p class="sec-sub">Zwölf Linien, ein paar tausend Nadeln, kein Muster.</p>
+            </div>
+          </div>
+
+          <figure class="figure reveal">
+            <div class="fig-head">
+              <div class="fig-title"><b>Geworfene Nadeln</b><span id="buffonNote">0 Nadeln</span></div>
+              <div class="fig-tools">
+                <span class="legend-item"><span class="legend-swatch" style="background:var(--amber)"></span>kreuzt</span>
+                <span class="legend-item"><span class="legend-swatch" style="background:rgba(150,150,190,0.6)"></span>frei</span>
+              </div>
+            </div>
+            <div class="canvas-wrap">
+              <canvas id="buffonCanvas" class="chart" role="img" aria-label="Zufällig geworfene Nadeln auf liniertem Papier, Kreuzungen gelb markiert."></canvas>
+            </div>
+            <figcaption class="fig-foot">
+              <span>Die Linien sind gleich weit auseinander, die Nadeln sind etwas kürzer als dieser Abstand.</span>
+              <span class="axis-note">x: Position · y: Position</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-num" aria-hidden="true">04</span>
+            <div>
+              <h2>Wie gut wird die Schätzung?</h2>
+              <p class="sec-sub">Nach 5 000 Würfen ist man bei etwa zwei Dezimalstellen — das ist der Preis des Zufalls.</p>
+            </div>
+          </div>
+
+          <figure class="figure reveal">
+            <div class="fig-head">
+              <div class="fig-title"><b>π-Schätzung über die Wurfzahl</b><span>5 000 Würfe, L/d = 0,8</span></div>
+              <div class="fig-tools">
+                <span class="legend-item"><span class="legend-swatch" style="background:var(--green)"></span>Schätzung</span>
+                <span class="legend-item"><span class="legend-swatch" style="background:rgba(255,255,255,0.5)"></span>π = 3,1416</span>
+              </div>
+            </div>
+            <div class="canvas-wrap">
+              <canvas id="buffonConv" class="chart" role="img" aria-label="Schätzung von Pi über die Anzahl der geworfenen Nadeln, die sich dem echten Wert annähert."></canvas>
+            </div>
+            <figcaption class="fig-foot">
+              <span>Am Anfang springt die Schätzung; mit jedem Wurf wird der Sprung kleiner.</span>
+              <span class="axis-note">x: Würfe · y: Schätzung für π</span>
+            </figcaption>
+          </figure>
+
+          <div class="prose reveal" style="margin-top:28px">
+            <p>
+              Die Genauigkeit wächst nur mit der Wurzel: Um den Fehler zu halbieren, braucht
+              man viermal so viele Nadeln. Für drei Dezimalstellen sind das Millionen Würfe —
+              deshalb ist Buffon historisch reizvoll und praktisch nutzlos. Als
+              Monte-Carlo-Methode ist die Idee trotzdem aktuell: Zufall plus Zählen schlägt
+              jede Formel, die man nicht hat.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-num" aria-hidden="true">05</span>
+            <div>
+              <h2>Geschichte und ein Betrug</h2>
+              <p class="sec-sub">1777 erfunden, 1901 berühmt gefälscht.</p>
+            </div>
+          </div>
+
+          <div class="cols-2">
+            <div class="prose reveal">
+              <p>
+                Georges-Louis Leclerc de Buffon stellte das Problem 1777 in seinem
+                <em>Essai d’arithmétique morale</em> — als Gedankenexperiment über
+                Wahrscheinlichkeit, nicht als Methode zur Berechnung von π.
+              </p>
+              <p>
+                Bekannt wurde es durch einen Skandal: Der italienische Mathematiker Mario
+                Lazzarini behauptete 1901, mit nur 3&thinsp;408 Würfen den Wert 355/113
+                erhalten zu haben — die beste Näherung mit drei Ziffern. Dass die Trefferzahl
+                dabei exakt 1&thinsp;808 war, ist bei dieser Wurfzahl so unwahrscheinlich,
+                dass die Daten heute als angepasst gelten.
+              </p>
+              <p>
+                In modernen Monte-Carlo-Verfahren steckt dieselbe Idee in ernsthafter Form:
+                Erwartungswerte werden durch Zufall und Mittelung geschätzt — in der
+                Physik, der Finanzmathematik und beim Training neuronaler Netze.
+              </p>
+            </div>
+
+            <div class="reveal">
+              <h3 style="margin-bottom:16px;color:var(--muted);font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:500">Typische Abweichung</h3>
+              <div class="table-wrap">
+                <table>
+                  <caption class="sr-only">Typische Abweichung der Pi-Schätzung je Wurfzahl</caption>
+                  <thead><tr><th scope="col">Würfe</th><th scope="col">Fehler</th><th scope="col">richtige Stellen</th></tr></thead>
+                  <tbody>
+                    <tr><td>100</td><td>± 0,31</td><td>0</td></tr>
+                    <tr><td>1&thinsp;000</td><td>± 0,10</td><td>1</td></tr>
+                    <tr><td>10&thinsp;000</td><td>± 0,03</td><td>2</td></tr>
+                    <tr><td>1&thinsp;000&thinsp;000</td><td>± 0,003</td><td>3</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="tbl-note">
+                Fehler ≈ π · √((1−p)/(N·p)) mit p = 2L/(πd) = 0,509. Jede Stelle kostet
+                Faktor 100.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <footer class="chapter-foot">
+      <div class="wrap">
+        <div class="foot-sources">
+          <div>
+            <h4>Quellen</h4>
+            <ul>
+            <li><a href="https://de.wikipedia.org/wiki/Buffonsches_Nadelproblem" target="_blank" rel="noopener noreferrer">Wikipedia: Buffonsches Nadelproblem</a></li>
+            <li><a href="https://de.wikipedia.org/wiki/Monte-Carlo-Simulation" target="_blank" rel="noopener noreferrer">Wikipedia: Monte-Carlo-Simulation</a></li>
+            <li><a href="https://www.jstor.org/stable/2691025" target="_blank" rel="noopener noreferrer">Badger (1994): Lazzarini's lucky approximation of pi</a></li>
+            </ul>
+          </div>
+
+        </div>
+        <nav class="chapter-nav" aria-label="Kapitelnavigation">
+          <a class="prev" href="#geburtstag"><span class="cn-k">← Vorher</span><span class="cn-t">Geburtstagsparadoxon</span></a>
+          <a class="next" href="#menu"><span class="cn-k">Weiter →</span><span class="cn-t">Alle Probleme</span></a>
+        </nav>
+      </div>
+    </footer>
+  </article>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p style="margin:0;max-width:70ch">
+      <strong style="color:var(--text)">Sieben Probleme, eine Methode.</strong>
+      Alle Folgen, Zählungen und Wahrscheinlichkeiten werden im Browser berechnet — keine
+      Tabellen aus dem Netz, kein Tracking, keine externen Schriften. Wo eine Aussage
+      bewiesen ist, steht es dabei; wo nur gerechnet wurde, auch.
+    </p>
+    <p style="margin:14px 0 0;font-size:12.5px;color:var(--faint)">
+      Gebaut als Erklärstück, nicht als Beweis. Quellen stehen am Ende jedes Kapitels.
+    </p>
+  </div>
+</footer>
+
+<noscript>
+  <p style="padding:24px;text-align:center;color:#ffc24a">
+    Diese Seite berechnet ihre Diagramme live im Browser. Bitte JavaScript aktivieren.
+  </p>
+</noscript>
+
+<script src="app.js"></script>
+<script src="chapters.js"></script>
+</body>
+</html>
